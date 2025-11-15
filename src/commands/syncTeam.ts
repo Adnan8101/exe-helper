@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction, PermissionFlagsBits } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, PermissionFlagsBits, EmbedBuilder } from 'discord.js';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -6,18 +6,60 @@ const prisma = new PrismaClient();
 // Team member configurations
 const TEAM_CONFIG = {
   FOUNDER_ID: '959653911923396629',
-  OWNER_IDS: ['643480211421265930', '283127777383809024'],
+  OWNER_IDS: ['643480211421265930', '283127777383809024','671775289252118528','965996958466605056'],
   MANAGER_IDS: ['785398118095126570', '1255565188829155388', '1391157574958710835', '930109353137176586'],
   EARLY_SUPPORT_ROLE_ID: '1395736628793839646',
   GUILD_ID: '449751480375705601', // EXE Server ID
 };
 
+// Monitoring state
+let isMonitoringEnabled = false;
+
 export const data = new SlashCommandBuilder()
-  .setName('syncteam')
-  .setDescription('Manually sync team members (auto-sync runs 24/7 every 30s)')
+  .setName('synctream')
+  .setDescription('Toggle real-time team monitoring')
+  .addSubcommand(subcommand =>
+    subcommand
+      .setName('enable')
+      .setDescription('Enable real-time team monitoring'))
+  .addSubcommand(subcommand =>
+    subcommand
+      .setName('disable')
+      .setDescription('Disable real-time team monitoring'))
   .setDefaultMemberPermissions(PermissionFlagsBits.Administrator);
 
+export function isMonitoring(): boolean {
+  return isMonitoringEnabled;
+}
+
 export async function execute(interaction: ChatInputCommandInteraction) {
+  const subcommand = interaction.options.getSubcommand();
+
+  if (subcommand === 'enable') {
+    isMonitoringEnabled = true;
+
+    const embed = new EmbedBuilder()
+      .setColor(0x00FF00)
+      .setTitle('✅ Done')
+      .setDescription('Now I will monitor all users **real time**\n**Real time**\n**Live instantly**\n\nNo need to run command manually')
+      .setTimestamp();
+
+    await interaction.reply({ embeds: [embed] });
+    return;
+
+  } else if (subcommand === 'disable') {
+    isMonitoringEnabled = false;
+
+    const embed = new EmbedBuilder()
+      .setColor(0xFF0000)
+      .setTitle('🛑 Monitoring Disabled')
+      .setDescription('Real-time monitoring has been turned off.')
+      .setTimestamp();
+
+    await interaction.reply({ embeds: [embed] });
+    return;
+  }
+
   const startTime = Date.now();
   
   try {

@@ -15,6 +15,7 @@ datasource db {
 
 model Vouch {
   id            String   @id @default(cuid())
+  vouchNumber   Int      @unique @default(autoincrement())
   channelId     String
   channelName   String
   authorId      String
@@ -30,6 +31,7 @@ model Vouch {
   @@index([channelId])
   @@index([authorId])
   @@index([timestamp])
+  @@index([vouchNumber])
 }
 
 model CaptureSession {

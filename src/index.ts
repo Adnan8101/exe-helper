@@ -137,7 +137,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
       await deleteProofCommand.execute(interaction);
     } else if (commandName === 'setprefix') {
       await setPrefixCommand.execute(interaction);
-    } else if (commandName === 'syncteam') {
+    } else if (commandName === 'synctream') {
       await syncTeamCommand.execute(interaction);
     }
   }
