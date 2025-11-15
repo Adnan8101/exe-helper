@@ -109,3 +109,17 @@ model AutoProofChannel {
   @@index([guildId])
   @@index([channelId])
 }
+
+model TeamMember {
+  id          String   @id @default(cuid())
+  userId      String   @unique
+  username    String
+  avatarUrl   String?
+  role        String   // 'Founder', 'Owner', 'Manager', 'EarlySupport'
+  order       Int      @default(0) // For sorting within role
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([role])
+  @@index([order])
+}

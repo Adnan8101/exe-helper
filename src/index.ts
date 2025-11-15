@@ -8,6 +8,7 @@ import { autoProofCommand, autoProofDisableCommand } from './commands/autoProof'
 import { deleteVouchCommand } from './commands/deleteVouch';
 import { deleteProofCommand } from './commands/deleteProof';
 import { setPrefixCommand } from './commands/setPrefix';
+import * as syncTeamCommand from './commands/syncTeam';
 import { connectDatabase, prisma } from './database';
 import { isValidVouch, extractImageUrls } from './utils/vouchValidator';
 import { 
@@ -21,6 +22,7 @@ import {
   addProofChannel,
   removeProofChannel
 } from './utils/channelCache';
+import { setupTeamSync } from './utils/teamSync';
 
 config();
 
@@ -50,6 +52,7 @@ const client = new Client({
     GatewayIntentBits.Guilds,
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMembers, // Required to access role members
   ],
 });
 
@@ -64,6 +67,7 @@ const commands = [
   deleteVouchCommand.data.toJSON(),
   deleteProofCommand.data.toJSON(),
   setPrefixCommand.data.toJSON(),
+  syncTeamCommand.data.toJSON(),
 ];
 
 // Register slash commands
@@ -84,6 +88,9 @@ async function registerCommands() {
     console.error('❌ Error registering commands:', error);
   }
 }
+
+// Setup team sync before bot ready
+setupTeamSync(client);
 
 client.once(Events.ClientReady, async (readyClient) => {
   console.log('\n' + '='.repeat(50));
@@ -130,6 +137,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
       await deleteProofCommand.execute(interaction);
     } else if (commandName === 'setprefix') {
       await setPrefixCommand.execute(interaction);
+    } else if (commandName === 'syncteam') {
+      await syncTeamCommand.execute(interaction);
     }
   }
   
