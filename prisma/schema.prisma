@@ -1,0 +1,111 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Vouch {
+  id            String   @id @default(cuid())
+  channelId     String
+  channelName   String
+  authorId      String
+  authorName    String
+  authorAvatar  String?
+  message       String   @db.Text
+  messageId     String   @unique
+  timestamp     DateTime
+  attachments   String[] // URLs of any attachments
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([channelId])
+  @@index([authorId])
+  @@index([timestamp])
+}
+
+model CaptureSession {
+  id            String   @id @default(cuid())
+  channelId     String
+  channelName   String
+  totalVouches  Int
+  startedBy     String   // User ID who initiated capture
+  startedAt     DateTime @default(now())
+  completedAt   DateTime?
+  isPushed      Boolean  @default(false)
+  pushedAt      DateTime?
+  summary       String?  @db.Text
+  
+  @@index([channelId])
+  @@index([startedAt])
+}
+
+model Proof {
+  id            String   @id @default(cuid())
+  channelId     String
+  channelName   String
+  authorId      String
+  authorName    String
+  authorAvatar  String?
+  message       String   @db.Text
+  messageId     String   @unique
+  timestamp     DateTime
+  imageUrls     String[] // Discord CDN image URLs
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([channelId])
+  @@index([authorId])
+  @@index([timestamp])
+}
+
+model ProofSession {
+  id            String   @id @default(cuid())
+  channelId     String
+  channelName   String
+  totalProofs   Int
+  totalImages   Int
+  startedBy     String   // User ID who initiated capture
+  startedAt     DateTime @default(now())
+  completedAt   DateTime?
+  isPushed      Boolean  @default(false)
+  pushedAt      DateTime?
+  summary       String?  @db.Text
+  
+  @@index([channelId])
+  @@index([startedAt])
+}
+
+model AutoVouchChannel {
+  id          String   @id @default(cuid())
+  guildId     String
+  channelId   String   @unique
+  channelName String
+  isEnabled   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([guildId])
+  @@index([channelId])
+}
+
+model AutoProofChannel {
+  id          String   @id @default(cuid())
+  guildId     String
+  channelId   String   @unique
+  channelName String
+  isEnabled   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  
+  @@index([guildId])
+  @@index([channelId])
+}

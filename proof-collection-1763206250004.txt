@@ -1,0 +1,1514 @@
+
+🔍 ========== STARTING IMAGE URL EXTRACTION ==========
+
+Channel: ﹒proofs﹒ᝰ (1419783509521993929)
+Total messages to scan: 103
+Started at: 2025-11-15T11:30:50.006Z
+
+
+📝 Message 1 from _.damonn:
+   Message ID: 1435338376759742536
+   Content: .
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 2 from _.damonn:
+   Message ID: 1435338534318903347
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 3 from _.damonn:
+   Message ID: 1435338585698992369
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 4 from _.damonn:
+   Message ID: 1435338789412143165
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 5 from _.damonn:
+   Message ID: 1435338894194376885
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 6 from _.damonn:
+   Message ID: 1435338949584224351
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 7 from _.damonn:
+   Message ID: 1435339028823015486
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 8 from _.damonn:
+   Message ID: 1435339073093898300
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 9 from _.damonn:
+   Message ID: 1435339123824136333
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 10 from _.damonn:
+   Message ID: 1435339165893136384
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 11 from _.damonn:
+   Message ID: 1435339219559252139
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 12 from _.damonn:
+   Message ID: 1435339288152768674
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 13 from _.damonn:
+   Message ID: 1435339341521096757
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 14 from _.damonn:
+   Message ID: 1435339387612299455
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 15 from _.damonn:
+   Message ID: 1435339425721614405
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 16 from _.damonn:
+   Message ID: 1435339472605548744
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 17 from _.damonn:
+   Message ID: 1435339579736592524
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 18 from _.damonn:
+   Message ID: 1435339637005615134
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 19 from _.damonn:
+   Message ID: 1435339723567792399
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 20 from _.damonn:
+   Message ID: 1435339802160664688
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 21 from _.damonn:
+   Message ID: 1435340363123392532
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 22 from _.damonn:
+   Message ID: 1435340443800961096
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 23 from _.damonn:
+   Message ID: 1435340558334689390
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 24 from _.damonn:
+   Message ID: 1435340670725259284
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 25 from _.damonn:
+   Message ID: 1435340736672436376
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 26 from _.damonn:
+   Message ID: 1435340805282861156
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 27 from _.damonn:
+   Message ID: 1435340902083067984
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 28 from _.damonn:
+   Message ID: 1435340999819006113
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 29 from _.damonn:
+   Message ID: 1435341143356215316
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 30 from _.damonn:
+   Message ID: 1435341198603714600
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 31 from _.damonn:
+   Message ID: 1435341245051306014
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 32 from _.damonn:
+   Message ID: 1435341548307877990
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 33 from _.damonn:
+   Message ID: 1435341646488141986
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 34 from _.damonn:
+   Message ID: 1435341714490392730
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 35 from _.damonn:
+   Message ID: 1435341815594221639
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 36 from _.damonn:
+   Message ID: 1435341891716649082
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 37 from rex.f:
+   Message ID: 1435341895105511485
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 38 from rex.f:
+   Message ID: 1435341933395316787
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 39 from rex.f:
+   Message ID: 1435341985320927283
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 40 from _.damonn:
+   Message ID: 1435341995932516493
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 41 from rex.f:
+   Message ID: 1435342016987922665
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 42 from rex.f:
+   Message ID: 1435342091617046752
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 43 from _.damonn:
+   Message ID: 1435343263925014650
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435343263879139440/IMG_20251105_003107.jpg?ex=691976d5&is=69182555&hm=8ab8193bc09e9a6cf92b306da71e37a33dd73da26539fda6eb1b414d0479b6f3&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435343263879139440/IMG_20251105_003107.jpg?ex=691976d5&is=69182555&hm=8ab8193bc09e9a6cf92b306da71e37a33dd73da26539fda6eb1b414d0479b6f3&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435343263879139440/IMG_20251105_003107.jpg?ex=691976d5&is=69182555&hm=8ab8193bc09e9a6cf92b306da71e37a33dd73da26539fda6eb1b414d0479b6f3&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435343263879139440/IMG_20251105_003107.jpg?ex=691976d5&is=69182555&hm=8ab8193bc09e9a6cf92b306da71e37a33dd73da26539fda6eb1b414d0479b6f3&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 44 from _.damonn:
+   Message ID: 1435343276860244149
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435343276030038037/Screenshot_2025-11-05-00-29-01-08_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976d8&is=69182558&hm=a5e2a2ff08b8333d3865d6b696c9ffda8970ffa391142d2f7d4a188a8b243e3d&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435343276030038037/Screenshot_2025-11-05-00-29-01-08_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976d8&is=69182558&hm=a5e2a2ff08b8333d3865d6b696c9ffda8970ffa391142d2f7d4a188a8b243e3d&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435343276030038037/Screenshot_2025-11-05-00-29-01-08_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976d8&is=69182558&hm=a5e2a2ff08b8333d3865d6b696c9ffda8970ffa391142d2f7d4a188a8b243e3d&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435343276030038037/Screenshot_2025-11-05-00-29-01-08_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976d8&is=69182558&hm=a5e2a2ff08b8333d3865d6b696c9ffda8970ffa391142d2f7d4a188a8b243e3d&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 45 from _.damonn:
+   Message ID: 1435343288596037682
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435343288235458600/Screenshot_2025-11-05-00-28-27-41_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976db&is=6918255b&hm=b988c7569689f84eac623aca0289a57850dcc4a87fa5e41dd7f6cb642b751980&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435343288235458600/Screenshot_2025-11-05-00-28-27-41_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976db&is=6918255b&hm=b988c7569689f84eac623aca0289a57850dcc4a87fa5e41dd7f6cb642b751980&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435343288235458600/Screenshot_2025-11-05-00-28-27-41_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976db&is=6918255b&hm=b988c7569689f84eac623aca0289a57850dcc4a87fa5e41dd7f6cb642b751980&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435343288235458600/Screenshot_2025-11-05-00-28-27-41_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976db&is=6918255b&hm=b988c7569689f84eac623aca0289a57850dcc4a87fa5e41dd7f6cb642b751980&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 46 from _.damonn:
+   Message ID: 1435343298695794769
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435343298436010095/Screenshot_2025-11-05-00-27-49-77_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976dd&is=6918255d&hm=5f933a35cb755904b5947cab1a802fe918d7ae7bd6a23303a308bf30e01fd548&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435343298436010095/Screenshot_2025-11-05-00-27-49-77_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976dd&is=6918255d&hm=5f933a35cb755904b5947cab1a802fe918d7ae7bd6a23303a308bf30e01fd548&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435343298436010095/Screenshot_2025-11-05-00-27-49-77_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976dd&is=6918255d&hm=5f933a35cb755904b5947cab1a802fe918d7ae7bd6a23303a308bf30e01fd548&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435343298436010095/Screenshot_2025-11-05-00-27-49-77_49b96b5fbae0d12a18edc4a3afe0dfd9.jpg?ex=691976dd&is=6918255d&hm=5f933a35cb755904b5947cab1a802fe918d7ae7bd6a23303a308bf30e01fd548&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 47 from _.damonn:
+   Message ID: 1435343698652168375
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 48 from _.damonn:
+   Message ID: 1435343753761259745
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 49 from _.damonn:
+   Message ID: 1435343905859174400
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 50 from _.damonn:
+   Message ID: 1435343962104795249
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 51 from _.damonn:
+   Message ID: 1435344051733004500
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 52 from _.damonn:
+   Message ID: 1435344318897328230
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 53 from _.damonn:
+   Message ID: 1435344409481969805
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 54 from _.damonn:
+   Message ID: 1435344482928296046
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 55 from _.damonn:
+   Message ID: 1435344545876279390
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 56 from _.damonn:
+   Message ID: 1435346011202519264
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346010665779201/Screenshot_2025-09-30-16-47-29-700_com.fampay.in.jpg?ex=69197964&is=691827e4&hm=3a2534fd8a4eb1276c322b4cb0e8d9cb097ed1d434b0eebe0bfd14d668274dfe&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346010665779201/Screenshot_2025-09-30-16-47-29-700_com.fampay.in.jpg?ex=69197964&is=691827e4&hm=3a2534fd8a4eb1276c322b4cb0e8d9cb097ed1d434b0eebe0bfd14d668274dfe&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346010665779201/Screenshot_2025-09-30-16-47-29-700_com.fampay.in.jpg?ex=69197964&is=691827e4&hm=3a2534fd8a4eb1276c322b4cb0e8d9cb097ed1d434b0eebe0bfd14d668274dfe&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346010665779201/Screenshot_2025-09-30-16-47-29-700_com.fampay.in.jpg?ex=69197964&is=691827e4&hm=3a2534fd8a4eb1276c322b4cb0e8d9cb097ed1d434b0eebe0bfd14d668274dfe&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 57 from _.damonn:
+   Message ID: 1435346018135969823
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346018207142020/Screenshot_2025-09-30-16-48-32-437_com.fampay.in.jpg?ex=69197966&is=691827e6&hm=9409f98f2bcfafb775ec7310707939b09033f3dea7978044483c80d9b4f517f8&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346018207142020/Screenshot_2025-09-30-16-48-32-437_com.fampay.in.jpg?ex=69197966&is=691827e6&hm=9409f98f2bcfafb775ec7310707939b09033f3dea7978044483c80d9b4f517f8&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346018207142020/Screenshot_2025-09-30-16-48-32-437_com.fampay.in.jpg?ex=69197966&is=691827e6&hm=9409f98f2bcfafb775ec7310707939b09033f3dea7978044483c80d9b4f517f8&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346018207142020/Screenshot_2025-09-30-16-48-32-437_com.fampay.in.jpg?ex=69197966&is=691827e6&hm=9409f98f2bcfafb775ec7310707939b09033f3dea7978044483c80d9b4f517f8&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 58 from _.damonn:
+   Message ID: 1435346028885708871
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346028567199925/Screenshot_2025-09-30-16-50-36-684_com.fampay.in.jpg?ex=69197968&is=691827e8&hm=1129deea63082c11a44d565132c8ac8646ab8b819d5dfb4478bad5dfe970746f&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346028567199925/Screenshot_2025-09-30-16-50-36-684_com.fampay.in.jpg?ex=69197968&is=691827e8&hm=1129deea63082c11a44d565132c8ac8646ab8b819d5dfb4478bad5dfe970746f&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346028567199925/Screenshot_2025-09-30-16-50-36-684_com.fampay.in.jpg?ex=69197968&is=691827e8&hm=1129deea63082c11a44d565132c8ac8646ab8b819d5dfb4478bad5dfe970746f&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346028567199925/Screenshot_2025-09-30-16-50-36-684_com.fampay.in.jpg?ex=69197968&is=691827e8&hm=1129deea63082c11a44d565132c8ac8646ab8b819d5dfb4478bad5dfe970746f&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 59 from _.damonn:
+   Message ID: 1435346038696186018
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346038360772639/Screenshot_2025-09-30-16-53-09-513_com.fampay.in.jpg?ex=6919796a&is=691827ea&hm=a906b8f762df9e6207ec99309da17ddf355c70c3b597cdfb1504fc6823dc322a&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346038360772639/Screenshot_2025-09-30-16-53-09-513_com.fampay.in.jpg?ex=6919796a&is=691827ea&hm=a906b8f762df9e6207ec99309da17ddf355c70c3b597cdfb1504fc6823dc322a&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346038360772639/Screenshot_2025-09-30-16-53-09-513_com.fampay.in.jpg?ex=6919796a&is=691827ea&hm=a906b8f762df9e6207ec99309da17ddf355c70c3b597cdfb1504fc6823dc322a&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346038360772639/Screenshot_2025-09-30-16-53-09-513_com.fampay.in.jpg?ex=6919796a&is=691827ea&hm=a906b8f762df9e6207ec99309da17ddf355c70c3b597cdfb1504fc6823dc322a&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 60 from _.damonn:
+   Message ID: 1435346047617597611
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346047365812458/Screenshot_2025-09-30-16-56-02-310_com.fampay.in.jpg?ex=6919796d&is=691827ed&hm=179e850e4aad87f660625625d64008480b428da2fc5095adc0574948d9775cad&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346047365812458/Screenshot_2025-09-30-16-56-02-310_com.fampay.in.jpg?ex=6919796d&is=691827ed&hm=179e850e4aad87f660625625d64008480b428da2fc5095adc0574948d9775cad&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346047365812458/Screenshot_2025-09-30-16-56-02-310_com.fampay.in.jpg?ex=6919796d&is=691827ed&hm=179e850e4aad87f660625625d64008480b428da2fc5095adc0574948d9775cad&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346047365812458/Screenshot_2025-09-30-16-56-02-310_com.fampay.in.jpg?ex=6919796d&is=691827ed&hm=179e850e4aad87f660625625d64008480b428da2fc5095adc0574948d9775cad&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 61 from _.damonn:
+   Message ID: 1435346061123256340
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346060812750888/Screenshot_2025-09-30-16-58-32-820_com.fampay.in.jpg?ex=69197970&is=691827f0&hm=cb0cd200491620caa4e6a9e82b7fb034e969416eb34280edbe62aa9ac76f5c17&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346060812750888/Screenshot_2025-09-30-16-58-32-820_com.fampay.in.jpg?ex=69197970&is=691827f0&hm=cb0cd200491620caa4e6a9e82b7fb034e969416eb34280edbe62aa9ac76f5c17&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346060812750888/Screenshot_2025-09-30-16-58-32-820_com.fampay.in.jpg?ex=69197970&is=691827f0&hm=cb0cd200491620caa4e6a9e82b7fb034e969416eb34280edbe62aa9ac76f5c17&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346060812750888/Screenshot_2025-09-30-16-58-32-820_com.fampay.in.jpg?ex=69197970&is=691827f0&hm=cb0cd200491620caa4e6a9e82b7fb034e969416eb34280edbe62aa9ac76f5c17&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 62 from _.damonn:
+   Message ID: 1435346077103427647
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346076105179196/Screenshot_2025-09-30-17-12-46-610_com.fampay.in.jpg?ex=69197973&is=691827f3&hm=85cebd0d3115b11ead6c53df51a786c759ae46fb0ac2fc6a5fa5de5711cbd0d2&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346076105179196/Screenshot_2025-09-30-17-12-46-610_com.fampay.in.jpg?ex=69197973&is=691827f3&hm=85cebd0d3115b11ead6c53df51a786c759ae46fb0ac2fc6a5fa5de5711cbd0d2&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346076105179196/Screenshot_2025-09-30-17-12-46-610_com.fampay.in.jpg?ex=69197973&is=691827f3&hm=85cebd0d3115b11ead6c53df51a786c759ae46fb0ac2fc6a5fa5de5711cbd0d2&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346076105179196/Screenshot_2025-09-30-17-12-46-610_com.fampay.in.jpg?ex=69197973&is=691827f3&hm=85cebd0d3115b11ead6c53df51a786c759ae46fb0ac2fc6a5fa5de5711cbd0d2&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 63 from _.damonn:
+   Message ID: 1435346092643450940
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346092177752105/Screenshot_2025-09-30-17-44-00-915_com.fampay.in.jpg?ex=69197977&is=691827f7&hm=a970f1cf6266ce199dfe80f4a9aa41b6e69991bf7bb25503cfeaa2b4c8caf0c7&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346092177752105/Screenshot_2025-09-30-17-44-00-915_com.fampay.in.jpg?ex=69197977&is=691827f7&hm=a970f1cf6266ce199dfe80f4a9aa41b6e69991bf7bb25503cfeaa2b4c8caf0c7&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346092177752105/Screenshot_2025-09-30-17-44-00-915_com.fampay.in.jpg?ex=69197977&is=691827f7&hm=a970f1cf6266ce199dfe80f4a9aa41b6e69991bf7bb25503cfeaa2b4c8caf0c7&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346092177752105/Screenshot_2025-09-30-17-44-00-915_com.fampay.in.jpg?ex=69197977&is=691827f7&hm=a970f1cf6266ce199dfe80f4a9aa41b6e69991bf7bb25503cfeaa2b4c8caf0c7&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 64 from _.damonn:
+   Message ID: 1435346097315909704
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346097160589342/Screenshot_2025-10-03-15-14-22-605_com.fampay.in.jpg?ex=69197979&is=691827f9&hm=3ec5017c4779ecfd8d2d55e45571623cb76c3ca05205ee0a1f753c17b9797397&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346097160589342/Screenshot_2025-10-03-15-14-22-605_com.fampay.in.jpg?ex=69197979&is=691827f9&hm=3ec5017c4779ecfd8d2d55e45571623cb76c3ca05205ee0a1f753c17b9797397&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346097160589342/Screenshot_2025-10-03-15-14-22-605_com.fampay.in.jpg?ex=69197979&is=691827f9&hm=3ec5017c4779ecfd8d2d55e45571623cb76c3ca05205ee0a1f753c17b9797397&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346097160589342/Screenshot_2025-10-03-15-14-22-605_com.fampay.in.jpg?ex=69197979&is=691827f9&hm=3ec5017c4779ecfd8d2d55e45571623cb76c3ca05205ee0a1f753c17b9797397&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 65 from _.damonn:
+   Message ID: 1435346115758395593
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346114634186975/Screenshot_2025-10-03-17-52-06-588_com.fampay.in.jpg?ex=6919797d&is=691827fd&hm=da3c7a41bfbbd1a2c8da483472985d9dc776ac9418d1fe861d3fcbb84e8a8f67&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346114634186975/Screenshot_2025-10-03-17-52-06-588_com.fampay.in.jpg?ex=6919797d&is=691827fd&hm=da3c7a41bfbbd1a2c8da483472985d9dc776ac9418d1fe861d3fcbb84e8a8f67&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346114634186975/Screenshot_2025-10-03-17-52-06-588_com.fampay.in.jpg?ex=6919797d&is=691827fd&hm=da3c7a41bfbbd1a2c8da483472985d9dc776ac9418d1fe861d3fcbb84e8a8f67&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346114634186975/Screenshot_2025-10-03-17-52-06-588_com.fampay.in.jpg?ex=6919797d&is=691827fd&hm=da3c7a41bfbbd1a2c8da483472985d9dc776ac9418d1fe861d3fcbb84e8a8f67&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 66 from _.damonn:
+   Message ID: 1435346133206569124
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346132656984265/Screenshot_2025-10-03-17-53-31-827_com.fampay.in.jpg?ex=69197981&is=69182801&hm=576b7858d168de8154e086c2706cd706fbe612337e843614d020f95642568fc2&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346132656984265/Screenshot_2025-10-03-17-53-31-827_com.fampay.in.jpg?ex=69197981&is=69182801&hm=576b7858d168de8154e086c2706cd706fbe612337e843614d020f95642568fc2&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346132656984265/Screenshot_2025-10-03-17-53-31-827_com.fampay.in.jpg?ex=69197981&is=69182801&hm=576b7858d168de8154e086c2706cd706fbe612337e843614d020f95642568fc2&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346132656984265/Screenshot_2025-10-03-17-53-31-827_com.fampay.in.jpg?ex=69197981&is=69182801&hm=576b7858d168de8154e086c2706cd706fbe612337e843614d020f95642568fc2&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 67 from _.damonn:
+   Message ID: 1435346143029497989
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346142702469283/Screenshot_2025-10-05-18-19-22-520_com.fampay.in.jpg?ex=69197983&is=69182803&hm=461ecb50acefc0e51f201e07ad0a872d1635f890dc567c71bdc18d714d94a764&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346142702469283/Screenshot_2025-10-05-18-19-22-520_com.fampay.in.jpg?ex=69197983&is=69182803&hm=461ecb50acefc0e51f201e07ad0a872d1635f890dc567c71bdc18d714d94a764&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346142702469283/Screenshot_2025-10-05-18-19-22-520_com.fampay.in.jpg?ex=69197983&is=69182803&hm=461ecb50acefc0e51f201e07ad0a872d1635f890dc567c71bdc18d714d94a764&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346142702469283/Screenshot_2025-10-05-18-19-22-520_com.fampay.in.jpg?ex=69197983&is=69182803&hm=461ecb50acefc0e51f201e07ad0a872d1635f890dc567c71bdc18d714d94a764&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 68 from _.damonn:
+   Message ID: 1435346158615793806
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346158330445844/Screenshot_2025-10-05-22-30-30-762_com.fampay.in.jpg?ex=69197987&is=69182807&hm=b5a9575873961930a0d5d116515044d85b12250048f02ce07a33489008618b96&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346158330445844/Screenshot_2025-10-05-22-30-30-762_com.fampay.in.jpg?ex=69197987&is=69182807&hm=b5a9575873961930a0d5d116515044d85b12250048f02ce07a33489008618b96&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346158330445844/Screenshot_2025-10-05-22-30-30-762_com.fampay.in.jpg?ex=69197987&is=69182807&hm=b5a9575873961930a0d5d116515044d85b12250048f02ce07a33489008618b96&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346158330445844/Screenshot_2025-10-05-22-30-30-762_com.fampay.in.jpg?ex=69197987&is=69182807&hm=b5a9575873961930a0d5d116515044d85b12250048f02ce07a33489008618b96&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 69 from _.damonn:
+   Message ID: 1435346174931370127
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346174537240618/Screenshot_2025-10-06-14-34-32-169_com.fampay.in.jpg?ex=6919798b&is=6918280b&hm=5f4b47490696cec1b62de6264d675b42bd8f4f7e23d2f11026614365fb8bf3c3&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346174537240618/Screenshot_2025-10-06-14-34-32-169_com.fampay.in.jpg?ex=6919798b&is=6918280b&hm=5f4b47490696cec1b62de6264d675b42bd8f4f7e23d2f11026614365fb8bf3c3&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346174537240618/Screenshot_2025-10-06-14-34-32-169_com.fampay.in.jpg?ex=6919798b&is=6918280b&hm=5f4b47490696cec1b62de6264d675b42bd8f4f7e23d2f11026614365fb8bf3c3&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346174537240618/Screenshot_2025-10-06-14-34-32-169_com.fampay.in.jpg?ex=6919798b&is=6918280b&hm=5f4b47490696cec1b62de6264d675b42bd8f4f7e23d2f11026614365fb8bf3c3&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 70 from _.damonn:
+   Message ID: 1435346188776767568
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346188495880373/Screenshot_2025-10-06-22-29-51-376_com.fampay.in.jpg?ex=6919798e&is=6918280e&hm=13f5b7d8bc0646ff74a47d6a17b39141fec58fe0779ea2783f31fd85ed47e928&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346188495880373/Screenshot_2025-10-06-22-29-51-376_com.fampay.in.jpg?ex=6919798e&is=6918280e&hm=13f5b7d8bc0646ff74a47d6a17b39141fec58fe0779ea2783f31fd85ed47e928&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346188495880373/Screenshot_2025-10-06-22-29-51-376_com.fampay.in.jpg?ex=6919798e&is=6918280e&hm=13f5b7d8bc0646ff74a47d6a17b39141fec58fe0779ea2783f31fd85ed47e928&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346188495880373/Screenshot_2025-10-06-22-29-51-376_com.fampay.in.jpg?ex=6919798e&is=6918280e&hm=13f5b7d8bc0646ff74a47d6a17b39141fec58fe0779ea2783f31fd85ed47e928&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 71 from _.damonn:
+   Message ID: 1435346212906729553
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346212558733342/Screenshot_2025-10-07-11-03-52-759_com.fampay.in.jpg?ex=69197994&is=69182814&hm=6321b45bb63d719c75f1ccf6bf9530dc8cfe01d60affea9414d9c6eea1aa746f&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346212558733342/Screenshot_2025-10-07-11-03-52-759_com.fampay.in.jpg?ex=69197994&is=69182814&hm=6321b45bb63d719c75f1ccf6bf9530dc8cfe01d60affea9414d9c6eea1aa746f&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346212558733342/Screenshot_2025-10-07-11-03-52-759_com.fampay.in.jpg?ex=69197994&is=69182814&hm=6321b45bb63d719c75f1ccf6bf9530dc8cfe01d60affea9414d9c6eea1aa746f&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346212558733342/Screenshot_2025-10-07-11-03-52-759_com.fampay.in.jpg?ex=69197994&is=69182814&hm=6321b45bb63d719c75f1ccf6bf9530dc8cfe01d60affea9414d9c6eea1aa746f&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 72 from _.damonn:
+   Message ID: 1435346224294269101
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346223946272830/Screenshot_2025-10-07-11-22-59-231_com.fampay.in.jpg?ex=69197997&is=69182817&hm=85b8df3f2cac8a22726f4238b4b209b0ac7074fbe9530c9134e236dfc982df06&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346223946272830/Screenshot_2025-10-07-11-22-59-231_com.fampay.in.jpg?ex=69197997&is=69182817&hm=85b8df3f2cac8a22726f4238b4b209b0ac7074fbe9530c9134e236dfc982df06&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346223946272830/Screenshot_2025-10-07-11-22-59-231_com.fampay.in.jpg?ex=69197997&is=69182817&hm=85b8df3f2cac8a22726f4238b4b209b0ac7074fbe9530c9134e236dfc982df06&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346223946272830/Screenshot_2025-10-07-11-22-59-231_com.fampay.in.jpg?ex=69197997&is=69182817&hm=85b8df3f2cac8a22726f4238b4b209b0ac7074fbe9530c9134e236dfc982df06&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 73 from _.damonn:
+   Message ID: 1435346235275088013
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346234620514314/Screenshot_2025-10-07-14-03-37-194_com.fampay.in.jpg?ex=69197999&is=69182819&hm=dad6af11bf33c1ea99f98e8206d99abc0ffc1d594c4c0af7d070642eb10110f7&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346234620514314/Screenshot_2025-10-07-14-03-37-194_com.fampay.in.jpg?ex=69197999&is=69182819&hm=dad6af11bf33c1ea99f98e8206d99abc0ffc1d594c4c0af7d070642eb10110f7&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346234620514314/Screenshot_2025-10-07-14-03-37-194_com.fampay.in.jpg?ex=69197999&is=69182819&hm=dad6af11bf33c1ea99f98e8206d99abc0ffc1d594c4c0af7d070642eb10110f7&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346234620514314/Screenshot_2025-10-07-14-03-37-194_com.fampay.in.jpg?ex=69197999&is=69182819&hm=dad6af11bf33c1ea99f98e8206d99abc0ffc1d594c4c0af7d070642eb10110f7&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 74 from _.damonn:
+   Message ID: 1435346244737175745
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346244812804228/Screenshot_2025-10-07-19-20-36-102_com.fampay.in.jpg?ex=6919799c&is=6918281c&hm=30018f8445de8262cb0457646861c7bb6968975f85cbb4c096c1de8544e35750&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346244812804228/Screenshot_2025-10-07-19-20-36-102_com.fampay.in.jpg?ex=6919799c&is=6918281c&hm=30018f8445de8262cb0457646861c7bb6968975f85cbb4c096c1de8544e35750&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346244812804228/Screenshot_2025-10-07-19-20-36-102_com.fampay.in.jpg?ex=6919799c&is=6918281c&hm=30018f8445de8262cb0457646861c7bb6968975f85cbb4c096c1de8544e35750&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346244812804228/Screenshot_2025-10-07-19-20-36-102_com.fampay.in.jpg?ex=6919799c&is=6918281c&hm=30018f8445de8262cb0457646861c7bb6968975f85cbb4c096c1de8544e35750&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 75 from _.damonn:
+   Message ID: 1435346253654265896
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346253327368353/Screenshot_2025-10-07-19-22-14-302_com.fampay.in.jpg?ex=6919799e&is=6918281e&hm=fb1f7149853a5e588ef60bdd6850673f86bdee8d5d970b6937815beb44349adf&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346253327368353/Screenshot_2025-10-07-19-22-14-302_com.fampay.in.jpg?ex=6919799e&is=6918281e&hm=fb1f7149853a5e588ef60bdd6850673f86bdee8d5d970b6937815beb44349adf&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346253327368353/Screenshot_2025-10-07-19-22-14-302_com.fampay.in.jpg?ex=6919799e&is=6918281e&hm=fb1f7149853a5e588ef60bdd6850673f86bdee8d5d970b6937815beb44349adf&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346253327368353/Screenshot_2025-10-07-19-22-14-302_com.fampay.in.jpg?ex=6919799e&is=6918281e&hm=fb1f7149853a5e588ef60bdd6850673f86bdee8d5d970b6937815beb44349adf&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 76 from _.damonn:
+   Message ID: 1435346264840474695
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346264584884380/Screenshot_2025-10-07-20-33-43-930_com.fampay.in.jpg?ex=691979a0&is=69182820&hm=d186eb0ea13ed549364ed60a5c7f4e96391db98d5c2503f379f2e1d272207219&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346264584884380/Screenshot_2025-10-07-20-33-43-930_com.fampay.in.jpg?ex=691979a0&is=69182820&hm=d186eb0ea13ed549364ed60a5c7f4e96391db98d5c2503f379f2e1d272207219&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346264584884380/Screenshot_2025-10-07-20-33-43-930_com.fampay.in.jpg?ex=691979a0&is=69182820&hm=d186eb0ea13ed549364ed60a5c7f4e96391db98d5c2503f379f2e1d272207219&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346264584884380/Screenshot_2025-10-07-20-33-43-930_com.fampay.in.jpg?ex=691979a0&is=69182820&hm=d186eb0ea13ed549364ed60a5c7f4e96391db98d5c2503f379f2e1d272207219&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 77 from _.damonn:
+   Message ID: 1435346276597108807
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346275699789865/Screenshot_2025-10-07-23-42-59-398_com.fampay.in.jpg?ex=691979a3&is=69182823&hm=8c9f97391bba2708682a8c91ff502c03ce2765fd199dd3e6bdf7570d86ed5dc9&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346275699789865/Screenshot_2025-10-07-23-42-59-398_com.fampay.in.jpg?ex=691979a3&is=69182823&hm=8c9f97391bba2708682a8c91ff502c03ce2765fd199dd3e6bdf7570d86ed5dc9&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346275699789865/Screenshot_2025-10-07-23-42-59-398_com.fampay.in.jpg?ex=691979a3&is=69182823&hm=8c9f97391bba2708682a8c91ff502c03ce2765fd199dd3e6bdf7570d86ed5dc9&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346275699789865/Screenshot_2025-10-07-23-42-59-398_com.fampay.in.jpg?ex=691979a3&is=69182823&hm=8c9f97391bba2708682a8c91ff502c03ce2765fd199dd3e6bdf7570d86ed5dc9&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 78 from _.damonn:
+   Message ID: 1435346286604980244
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435346286017773608/Screenshot_2025-10-07-23-51-19-304_com.fampay.in.jpg?ex=691979a6&is=69182826&hm=e1448a05186c647eac2446807147131f4fd194acc63bd5df64187bf318d5bedf&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435346286017773608/Screenshot_2025-10-07-23-51-19-304_com.fampay.in.jpg?ex=691979a6&is=69182826&hm=e1448a05186c647eac2446807147131f4fd194acc63bd5df64187bf318d5bedf&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435346286017773608/Screenshot_2025-10-07-23-51-19-304_com.fampay.in.jpg?ex=691979a6&is=69182826&hm=e1448a05186c647eac2446807147131f4fd194acc63bd5df64187bf318d5bedf&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435346286017773608/Screenshot_2025-10-07-23-51-19-304_com.fampay.in.jpg?ex=691979a6&is=69182826&hm=e1448a05186c647eac2446807147131f4fd194acc63bd5df64187bf318d5bedf&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 79 from rex.f:
+   Message ID: 1435352467574358027
+   Content: [No content]
+   Attachments: 8
+   Embeds: 0
+   Extracted URLs (16):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435352464089153597/c317753c-4ad9-47da-8d7c-3c701c618dc5.png?ex=69197f66&is=69182de6&hm=57bce215a8b8c158ad54b012cadd5f449912d50f591de73c5feea9a4a10ca8ba&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435352464089153597/c317753c-4ad9-47da-8d7c-3c701c618dc5.png?ex=69197f66&is=69182de6&hm=57bce215a8b8c158ad54b012cadd5f449912d50f591de73c5feea9a4a10ca8ba&
+      3. https://cdn.discordapp.com/attachments/1419783509521993929/1435352464483291146/0f099455-ef29-4394-957a-31b471fd503e.png?ex=69197f67&is=69182de7&hm=0600281d0c82e2f5d35cdf4f94ce0fd3fe12b8635505e5cdaae7a62110ca01bd&
+      4. https://media.discordapp.net/attachments/1419783509521993929/1435352464483291146/0f099455-ef29-4394-957a-31b471fd503e.png?ex=69197f67&is=69182de7&hm=0600281d0c82e2f5d35cdf4f94ce0fd3fe12b8635505e5cdaae7a62110ca01bd&
+      5. https://cdn.discordapp.com/attachments/1419783509521993929/1435352465137467534/b73be23c-cfe1-4e19-b33e-1972cc1e3be6.png?ex=69197f67&is=69182de7&hm=0cb935c836ba0e9e8ecda54a8c9840afc0fddecaf3f8cbb89659faeaf9c7fe62&
+      6. https://media.discordapp.net/attachments/1419783509521993929/1435352465137467534/b73be23c-cfe1-4e19-b33e-1972cc1e3be6.png?ex=69197f67&is=69182de7&hm=0cb935c836ba0e9e8ecda54a8c9840afc0fddecaf3f8cbb89659faeaf9c7fe62&
+      7. https://cdn.discordapp.com/attachments/1419783509521993929/1435352465611423826/e212afff-cc4d-4b1b-80d9-163c1280c383.png?ex=69197f67&is=69182de7&hm=6badda223ded01c29a3c4c68a62f2379d78cc0707d7da5c99d2d3eb460e4de68&
+      8. https://media.discordapp.net/attachments/1419783509521993929/1435352465611423826/e212afff-cc4d-4b1b-80d9-163c1280c383.png?ex=69197f67&is=69182de7&hm=6badda223ded01c29a3c4c68a62f2379d78cc0707d7da5c99d2d3eb460e4de68&
+      9. https://cdn.discordapp.com/attachments/1419783509521993929/1435352465976594574/19e49aac-31b5-4b5b-882f-34f4dc244f2b.png?ex=69197f67&is=69182de7&hm=1e6405e9d692941fed887b450da626310ccd473794c29acb896eff1826b62344&
+      10. https://media.discordapp.net/attachments/1419783509521993929/1435352465976594574/19e49aac-31b5-4b5b-882f-34f4dc244f2b.png?ex=69197f67&is=69182de7&hm=1e6405e9d692941fed887b450da626310ccd473794c29acb896eff1826b62344&
+      11. https://cdn.discordapp.com/attachments/1419783509521993929/1435352466324590705/ae7a764c-3e36-44f3-8ef2-e7050c49971e.png?ex=69197f67&is=69182de7&hm=f7d907c068ab77809413aa6eb008fb89c6c1bd0f115a355a0d7951d54b091e85&
+      12. https://media.discordapp.net/attachments/1419783509521993929/1435352466324590705/ae7a764c-3e36-44f3-8ef2-e7050c49971e.png?ex=69197f67&is=69182de7&hm=f7d907c068ab77809413aa6eb008fb89c6c1bd0f115a355a0d7951d54b091e85&
+      13. https://cdn.discordapp.com/attachments/1419783509521993929/1435352466844815501/f7de9e61-da32-4f5e-9fad-b13bea90fa6b.png?ex=69197f67&is=69182de7&hm=0824bb87b3614b112bd38a0e4f6b1789811534377c80e0e3042ad8cfb348f092&
+      14. https://media.discordapp.net/attachments/1419783509521993929/1435352466844815501/f7de9e61-da32-4f5e-9fad-b13bea90fa6b.png?ex=69197f67&is=69182de7&hm=0824bb87b3614b112bd38a0e4f6b1789811534377c80e0e3042ad8cfb348f092&
+      15. https://cdn.discordapp.com/attachments/1419783509521993929/1435352467272499373/cb36c6b1-2fcd-4569-978c-c22ad791b6f3.png?ex=69197f67&is=69182de7&hm=4d6246d881486534081171de86edba6519b9e02573102814c49e01eacd706149&
+      16. https://media.discordapp.net/attachments/1419783509521993929/1435352467272499373/cb36c6b1-2fcd-4569-978c-c22ad791b6f3.png?ex=69197f67&is=69182de7&hm=4d6246d881486534081171de86edba6519b9e02573102814c49e01eacd706149&
+
+   🔍 Verifying 16 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352464089153597/c317753c-4ad9-47da-8d7c-3c701c618dc5.png?ex=69197f66&is=69182de6&hm=57bce215a8b8c158ad54b012cadd5f449912d50f591de73c5feea9a4a10ca8ba&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352464089153597/c317753c-4ad9-47da-8d7c-3c701c618dc5.png?ex=69197f66&is=69182de6&hm=57bce215a8b8c158ad54b012cadd5f449912d50f591de73c5feea9a4a10ca8ba&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352464483291146/0f099455-ef29-4394-957a-31b471fd503e.png?ex=69197f67&is=69182de7&hm=0600281d0c82e2f5d35cdf4f94ce0fd3fe12b8635505e5cdaae7a62110ca01bd&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352464483291146/0f099455-ef29-4394-957a-31b471fd503e.png?ex=69197f67&is=69182de7&hm=0600281d0c82e2f5d35cdf4f94ce0fd3fe12b8635505e5cdaae7a62110ca01bd&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352465137467534/b73be23c-cfe1-4e19-b33e-1972cc1e3be6.png?ex=69197f67&is=69182de7&hm=0cb935c836ba0e9e8ecda54a8c9840afc0fddecaf3f8cbb89659faeaf9c7fe62&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352465137467534/b73be23c-cfe1-4e19-b33e-1972cc1e3be6.png?ex=69197f67&is=69182de7&hm=0cb935c836ba0e9e8ecda54a8c9840afc0fddecaf3f8cbb89659faeaf9c7fe62&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352465611423826/e212afff-cc4d-4b1b-80d9-163c1280c383.png?ex=69197f67&is=69182de7&hm=6badda223ded01c29a3c4c68a62f2379d78cc0707d7da5c99d2d3eb460e4de68&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352465611423826/e212afff-cc4d-4b1b-80d9-163c1280c383.png?ex=69197f67&is=69182de7&hm=6badda223ded01c29a3c4c68a62f2379d78cc0707d7da5c99d2d3eb460e4de68&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352465976594574/19e49aac-31b5-4b5b-882f-34f4dc244f2b.png?ex=69197f67&is=69182de7&hm=1e6405e9d692941fed887b450da626310ccd473794c29acb896eff1826b62344&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352465976594574/19e49aac-31b5-4b5b-882f-34f4dc244f2b.png?ex=69197f67&is=69182de7&hm=1e6405e9d692941fed887b450da626310ccd473794c29acb896eff1826b62344&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352466324590705/ae7a764c-3e36-44f3-8ef2-e7050c49971e.png?ex=69197f67&is=69182de7&hm=f7d907c068ab77809413aa6eb008fb89c6c1bd0f115a355a0d7951d54b091e85&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352466324590705/ae7a764c-3e36-44f3-8ef2-e7050c49971e.png?ex=69197f67&is=69182de7&hm=f7d907c068ab77809413aa6eb008fb89c6c1bd0f115a355a0d7951d54b091e85&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352466844815501/f7de9e61-da32-4f5e-9fad-b13bea90fa6b.png?ex=69197f67&is=69182de7&hm=0824bb87b3614b112bd38a0e4f6b1789811534377c80e0e3042ad8cfb348f092&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352466844815501/f7de9e61-da32-4f5e-9fad-b13bea90fa6b.png?ex=69197f67&is=69182de7&hm=0824bb87b3614b112bd38a0e4f6b1789811534377c80e0e3042ad8cfb348f092&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435352467272499373/cb36c6b1-2fcd-4569-978c-c22ad791b6f3.png?ex=69197f67&is=69182de7&hm=4d6246d881486534081171de86edba6519b9e02573102814c49e01eacd706149&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435352467272499373/cb36c6b1-2fcd-4569-978c-c22ad791b6f3.png?ex=69197f67&is=69182de7&hm=4d6246d881486534081171de86edba6519b9e02573102814c49e01eacd706149&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 16 valid, 0 invalid
+
+📝 Message 80 from rex.f:
+   Message ID: 1435353474085818539
+   Content: [No content]
+   Attachments: 10
+   Embeds: 0
+   Extracted URLs (20):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435353469497114645/252ac895-a358-4d38-ae21-3eaea337dff2.png?ex=69198056&is=69182ed6&hm=0696775973f0f7e08ba189bd08e076a0dfbef0c5a8ecb8537f8e582959f955d9&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435353469497114645/252ac895-a358-4d38-ae21-3eaea337dff2.png?ex=69198056&is=69182ed6&hm=0696775973f0f7e08ba189bd08e076a0dfbef0c5a8ecb8537f8e582959f955d9&
+      3. https://cdn.discordapp.com/attachments/1419783509521993929/1435353470113943672/b36e833a-08b1-408d-a204-9da4b186a87b.png?ex=69198056&is=69182ed6&hm=546fec56472cbe74378d49fca69700f138efcacc327837e47413becdc9dca70e&
+      4. https://media.discordapp.net/attachments/1419783509521993929/1435353470113943672/b36e833a-08b1-408d-a204-9da4b186a87b.png?ex=69198056&is=69182ed6&hm=546fec56472cbe74378d49fca69700f138efcacc327837e47413becdc9dca70e&
+      5. https://cdn.discordapp.com/attachments/1419783509521993929/1435353470696947842/34f87fa4-bc65-4c10-9b65-4abe4c2c9fdc.png?ex=69198056&is=69182ed6&hm=c386158e1adbb4a92f6a4bf64f3fabb9c2c885dba82103e57d1029cd09a5e8ec&
+      6. https://media.discordapp.net/attachments/1419783509521993929/1435353470696947842/34f87fa4-bc65-4c10-9b65-4abe4c2c9fdc.png?ex=69198056&is=69182ed6&hm=c386158e1adbb4a92f6a4bf64f3fabb9c2c885dba82103e57d1029cd09a5e8ec&
+      7. https://cdn.discordapp.com/attachments/1419783509521993929/1435353471082692730/a8fd93d7-2fff-4645-a55d-6db543f73016.png?ex=69198057&is=69182ed7&hm=093e2dcfa06aa3d17d8de1720425fce942a20a32bf2fa05324f1f946b817164b&
+      8. https://media.discordapp.net/attachments/1419783509521993929/1435353471082692730/a8fd93d7-2fff-4645-a55d-6db543f73016.png?ex=69198057&is=69182ed7&hm=093e2dcfa06aa3d17d8de1720425fce942a20a32bf2fa05324f1f946b817164b&
+      9. https://cdn.discordapp.com/attachments/1419783509521993929/1435353471498059959/e344d524-4b3a-46dd-912e-6aacc296cea9.png?ex=69198057&is=69182ed7&hm=f4e89ef8131ce14f8517c56135a93ea3818cd1d072a8b9f71d06b7c209eac563&
+      10. https://media.discordapp.net/attachments/1419783509521993929/1435353471498059959/e344d524-4b3a-46dd-912e-6aacc296cea9.png?ex=69198057&is=69182ed7&hm=f4e89ef8131ce14f8517c56135a93ea3818cd1d072a8b9f71d06b7c209eac563&
+      11. https://cdn.discordapp.com/attachments/1419783509521993929/1435353471862968491/a9ded603-5ecd-48f1-a48d-1c125b764170.png?ex=69198057&is=69182ed7&hm=0feed1578f686c6b34edeb6155b09986d997b326160a5acd1523720b27249d19&
+      12. https://media.discordapp.net/attachments/1419783509521993929/1435353471862968491/a9ded603-5ecd-48f1-a48d-1c125b764170.png?ex=69198057&is=69182ed7&hm=0feed1578f686c6b34edeb6155b09986d997b326160a5acd1523720b27249d19&
+      13. https://cdn.discordapp.com/attachments/1419783509521993929/1435353472345182278/c246943d-6a1e-44de-82d2-161cccf8f5a0.png?ex=69198057&is=69182ed7&hm=29356ced77efb1ef3c1ece5be0ad58dbacfbcbae786f0b4f308e0732a380feeb&
+      14. https://media.discordapp.net/attachments/1419783509521993929/1435353472345182278/c246943d-6a1e-44de-82d2-161cccf8f5a0.png?ex=69198057&is=69182ed7&hm=29356ced77efb1ef3c1ece5be0ad58dbacfbcbae786f0b4f308e0732a380feeb&
+      15. https://cdn.discordapp.com/attachments/1419783509521993929/1435353472819269632/2077f3fe-d4cb-483d-ab0f-bb95ce78fff3.png?ex=69198057&is=69182ed7&hm=504194b49f00df305dd7f3e524f631fda6362a1f7e223712905390224b77756f&
+      16. https://media.discordapp.net/attachments/1419783509521993929/1435353472819269632/2077f3fe-d4cb-483d-ab0f-bb95ce78fff3.png?ex=69198057&is=69182ed7&hm=504194b49f00df305dd7f3e524f631fda6362a1f7e223712905390224b77756f&
+      17. https://cdn.discordapp.com/attachments/1419783509521993929/1435353473225851040/b5ab5917-25b8-496f-a2f1-8835d813684d.png?ex=69198057&is=69182ed7&hm=1ef8320b7dc438a6b4eabb9ebbbc84bf01b01b29e1e910c2986de55838f5e436&
+      18. https://media.discordapp.net/attachments/1419783509521993929/1435353473225851040/b5ab5917-25b8-496f-a2f1-8835d813684d.png?ex=69198057&is=69182ed7&hm=1ef8320b7dc438a6b4eabb9ebbbc84bf01b01b29e1e910c2986de55838f5e436&
+      19. https://cdn.discordapp.com/attachments/1419783509521993929/1435353473620381849/96eec46a-baa9-41e4-923f-764fef1f464e.png?ex=69198057&is=69182ed7&hm=531c7e16169d07d0a4dbebd7e366df1a05f8c4e014fa2b9c6166e4dd51c94914&
+      20. https://media.discordapp.net/attachments/1419783509521993929/1435353473620381849/96eec46a-baa9-41e4-923f-764fef1f464e.png?ex=69198057&is=69182ed7&hm=531c7e16169d07d0a4dbebd7e366df1a05f8c4e014fa2b9c6166e4dd51c94914&
+
+   🔍 Verifying 20 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353469497114645/252ac895-a358-4d38-ae21-3eaea337dff2.png?ex=69198056&is=69182ed6&hm=0696775973f0f7e08ba189bd08e076a0dfbef0c5a8ecb8537f8e582959f955d9&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353469497114645/252ac895-a358-4d38-ae21-3eaea337dff2.png?ex=69198056&is=69182ed6&hm=0696775973f0f7e08ba189bd08e076a0dfbef0c5a8ecb8537f8e582959f955d9&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353470113943672/b36e833a-08b1-408d-a204-9da4b186a87b.png?ex=69198056&is=69182ed6&hm=546fec56472cbe74378d49fca69700f138efcacc327837e47413becdc9dca70e&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353470113943672/b36e833a-08b1-408d-a204-9da4b186a87b.png?ex=69198056&is=69182ed6&hm=546fec56472cbe74378d49fca69700f138efcacc327837e47413becdc9dca70e&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353470696947842/34f87fa4-bc65-4c10-9b65-4abe4c2c9fdc.png?ex=69198056&is=69182ed6&hm=c386158e1adbb4a92f6a4bf64f3fabb9c2c885dba82103e57d1029cd09a5e8ec&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353470696947842/34f87fa4-bc65-4c10-9b65-4abe4c2c9fdc.png?ex=69198056&is=69182ed6&hm=c386158e1adbb4a92f6a4bf64f3fabb9c2c885dba82103e57d1029cd09a5e8ec&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353471082692730/a8fd93d7-2fff-4645-a55d-6db543f73016.png?ex=69198057&is=69182ed7&hm=093e2dcfa06aa3d17d8de1720425fce942a20a32bf2fa05324f1f946b817164b&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353471082692730/a8fd93d7-2fff-4645-a55d-6db543f73016.png?ex=69198057&is=69182ed7&hm=093e2dcfa06aa3d17d8de1720425fce942a20a32bf2fa05324f1f946b817164b&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353471498059959/e344d524-4b3a-46dd-912e-6aacc296cea9.png?ex=69198057&is=69182ed7&hm=f4e89ef8131ce14f8517c56135a93ea3818cd1d072a8b9f71d06b7c209eac563&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353471498059959/e344d524-4b3a-46dd-912e-6aacc296cea9.png?ex=69198057&is=69182ed7&hm=f4e89ef8131ce14f8517c56135a93ea3818cd1d072a8b9f71d06b7c209eac563&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353471862968491/a9ded603-5ecd-48f1-a48d-1c125b764170.png?ex=69198057&is=69182ed7&hm=0feed1578f686c6b34edeb6155b09986d997b326160a5acd1523720b27249d19&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353471862968491/a9ded603-5ecd-48f1-a48d-1c125b764170.png?ex=69198057&is=69182ed7&hm=0feed1578f686c6b34edeb6155b09986d997b326160a5acd1523720b27249d19&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353472345182278/c246943d-6a1e-44de-82d2-161cccf8f5a0.png?ex=69198057&is=69182ed7&hm=29356ced77efb1ef3c1ece5be0ad58dbacfbcbae786f0b4f308e0732a380feeb&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353472345182278/c246943d-6a1e-44de-82d2-161cccf8f5a0.png?ex=69198057&is=69182ed7&hm=29356ced77efb1ef3c1ece5be0ad58dbacfbcbae786f0b4f308e0732a380feeb&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353472819269632/2077f3fe-d4cb-483d-ab0f-bb95ce78fff3.png?ex=69198057&is=69182ed7&hm=504194b49f00df305dd7f3e524f631fda6362a1f7e223712905390224b77756f&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353472819269632/2077f3fe-d4cb-483d-ab0f-bb95ce78fff3.png?ex=69198057&is=69182ed7&hm=504194b49f00df305dd7f3e524f631fda6362a1f7e223712905390224b77756f&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353473225851040/b5ab5917-25b8-496f-a2f1-8835d813684d.png?ex=69198057&is=69182ed7&hm=1ef8320b7dc438a6b4eabb9ebbbc84bf01b01b29e1e910c2986de55838f5e436&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353473225851040/b5ab5917-25b8-496f-a2f1-8835d813684d.png?ex=69198057&is=69182ed7&hm=1ef8320b7dc438a6b4eabb9ebbbc84bf01b01b29e1e910c2986de55838f5e436&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353473620381849/96eec46a-baa9-41e4-923f-764fef1f464e.png?ex=69198057&is=69182ed7&hm=531c7e16169d07d0a4dbebd7e366df1a05f8c4e014fa2b9c6166e4dd51c94914&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353473620381849/96eec46a-baa9-41e4-923f-764fef1f464e.png?ex=69198057&is=69182ed7&hm=531c7e16169d07d0a4dbebd7e366df1a05f8c4e014fa2b9c6166e4dd51c94914&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 20 valid, 0 invalid
+
+📝 Message 81 from rex.f:
+   Message ID: 1435353588791644292
+   Content: [No content]
+   Attachments: 6
+   Embeds: 0
+   Extracted URLs (12):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435353586178461857/8d5d143d-7cdb-4137-9939-0487fffbafb6.png?ex=69198072&is=69182ef2&hm=fb59636a4316cd9affd8c0a78b65232b15e8671948a33a8ba45427fd669ef3ef&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435353586178461857/8d5d143d-7cdb-4137-9939-0487fffbafb6.png?ex=69198072&is=69182ef2&hm=fb59636a4316cd9affd8c0a78b65232b15e8671948a33a8ba45427fd669ef3ef&
+      3. https://cdn.discordapp.com/attachments/1419783509521993929/1435353586644291604/842fcd42-7010-49a0-9a9c-4e20e4acaf4c.png?ex=69198072&is=69182ef2&hm=0bebf82192bdd0b39c4ffb19e58b5061e0b24df5b6e82bafa76dd3d64630550e&
+      4. https://media.discordapp.net/attachments/1419783509521993929/1435353586644291604/842fcd42-7010-49a0-9a9c-4e20e4acaf4c.png?ex=69198072&is=69182ef2&hm=0bebf82192bdd0b39c4ffb19e58b5061e0b24df5b6e82bafa76dd3d64630550e&
+      5. https://cdn.discordapp.com/attachments/1419783509521993929/1435353586983895183/ce4e7049-5913-49c9-9fb3-2f38df76df0b.png?ex=69198072&is=69182ef2&hm=3d9c907cf3dbb1a3594f25bace04480d3a69bf3f12e377db934225c9d58f1385&
+      6. https://media.discordapp.net/attachments/1419783509521993929/1435353586983895183/ce4e7049-5913-49c9-9fb3-2f38df76df0b.png?ex=69198072&is=69182ef2&hm=3d9c907cf3dbb1a3594f25bace04480d3a69bf3f12e377db934225c9d58f1385&
+      7. https://cdn.discordapp.com/attachments/1419783509521993929/1435353587432689754/e60cb8eb-7f4f-4533-9659-a3bc785495a4.png?ex=69198072&is=69182ef2&hm=571907e4c2bdd17c3ab1c445e8d051ef5ea87ac6fedf0265ca160ef1c7da98cc&
+      8. https://media.discordapp.net/attachments/1419783509521993929/1435353587432689754/e60cb8eb-7f4f-4533-9659-a3bc785495a4.png?ex=69198072&is=69182ef2&hm=571907e4c2bdd17c3ab1c445e8d051ef5ea87ac6fedf0265ca160ef1c7da98cc&
+      9. https://cdn.discordapp.com/attachments/1419783509521993929/1435353587936137312/63483397-a8e2-4e21-8460-156faca6dd73.png?ex=69198072&is=69182ef2&hm=61985f8ee6a04f10a8ae9055703e99b14c63f19291e64083374c7af8ed4bdae4&
+      10. https://media.discordapp.net/attachments/1419783509521993929/1435353587936137312/63483397-a8e2-4e21-8460-156faca6dd73.png?ex=69198072&is=69182ef2&hm=61985f8ee6a04f10a8ae9055703e99b14c63f19291e64083374c7af8ed4bdae4&
+      11. https://cdn.discordapp.com/attachments/1419783509521993929/1435353588510621746/247f4afa-6f50-4c27-8480-8f20c0e5a3da.png?ex=69198073&is=69182ef3&hm=36fe69232bd37a412979942b201e2aaa9b64036b278ed89475097e4dc93dc419&
+      12. https://media.discordapp.net/attachments/1419783509521993929/1435353588510621746/247f4afa-6f50-4c27-8480-8f20c0e5a3da.png?ex=69198073&is=69182ef3&hm=36fe69232bd37a412979942b201e2aaa9b64036b278ed89475097e4dc93dc419&
+
+   🔍 Verifying 12 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353586178461857/8d5d143d-7cdb-4137-9939-0487fffbafb6.png?ex=69198072&is=69182ef2&hm=fb59636a4316cd9affd8c0a78b65232b15e8671948a33a8ba45427fd669ef3ef&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353586178461857/8d5d143d-7cdb-4137-9939-0487fffbafb6.png?ex=69198072&is=69182ef2&hm=fb59636a4316cd9affd8c0a78b65232b15e8671948a33a8ba45427fd669ef3ef&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353586644291604/842fcd42-7010-49a0-9a9c-4e20e4acaf4c.png?ex=69198072&is=69182ef2&hm=0bebf82192bdd0b39c4ffb19e58b5061e0b24df5b6e82bafa76dd3d64630550e&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353586644291604/842fcd42-7010-49a0-9a9c-4e20e4acaf4c.png?ex=69198072&is=69182ef2&hm=0bebf82192bdd0b39c4ffb19e58b5061e0b24df5b6e82bafa76dd3d64630550e&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353586983895183/ce4e7049-5913-49c9-9fb3-2f38df76df0b.png?ex=69198072&is=69182ef2&hm=3d9c907cf3dbb1a3594f25bace04480d3a69bf3f12e377db934225c9d58f1385&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353586983895183/ce4e7049-5913-49c9-9fb3-2f38df76df0b.png?ex=69198072&is=69182ef2&hm=3d9c907cf3dbb1a3594f25bace04480d3a69bf3f12e377db934225c9d58f1385&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353587432689754/e60cb8eb-7f4f-4533-9659-a3bc785495a4.png?ex=69198072&is=69182ef2&hm=571907e4c2bdd17c3ab1c445e8d051ef5ea87ac6fedf0265ca160ef1c7da98cc&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353587432689754/e60cb8eb-7f4f-4533-9659-a3bc785495a4.png?ex=69198072&is=69182ef2&hm=571907e4c2bdd17c3ab1c445e8d051ef5ea87ac6fedf0265ca160ef1c7da98cc&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353587936137312/63483397-a8e2-4e21-8460-156faca6dd73.png?ex=69198072&is=69182ef2&hm=61985f8ee6a04f10a8ae9055703e99b14c63f19291e64083374c7af8ed4bdae4&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353587936137312/63483397-a8e2-4e21-8460-156faca6dd73.png?ex=69198072&is=69182ef2&hm=61985f8ee6a04f10a8ae9055703e99b14c63f19291e64083374c7af8ed4bdae4&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435353588510621746/247f4afa-6f50-4c27-8480-8f20c0e5a3da.png?ex=69198073&is=69182ef3&hm=36fe69232bd37a412979942b201e2aaa9b64036b278ed89475097e4dc93dc419&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435353588510621746/247f4afa-6f50-4c27-8480-8f20c0e5a3da.png?ex=69198073&is=69182ef3&hm=36fe69232bd37a412979942b201e2aaa9b64036b278ed89475097e4dc93dc419&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 12 valid, 0 invalid
+
+📝 Message 82 from _.damonn:
+   Message ID: 1435619184598847589
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1435619184263430287/IMG_20251105_184752.jpg?ex=6919264e&is=6917d4ce&hm=0d418df61e99ab35a14d6668344b98e7189e4051604ed9d124ddce39869ca2f0&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1435619184263430287/IMG_20251105_184752.jpg?ex=6919264e&is=6917d4ce&hm=0d418df61e99ab35a14d6668344b98e7189e4051604ed9d124ddce39869ca2f0&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1435619184263430287/IMG_20251105_184752.jpg?ex=6919264e&is=6917d4ce&hm=0d418df61e99ab35a14d6668344b98e7189e4051604ed9d124ddce39869ca2f0&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1435619184263430287/IMG_20251105_184752.jpg?ex=6919264e&is=6917d4ce&hm=0d418df61e99ab35a14d6668344b98e7189e4051604ed9d124ddce39869ca2f0&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+📝 Message 83 from rex.f:
+   Message ID: 1435619955671568485
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 84 from rex.f:
+   Message ID: 1435620090740740098
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 85 from rex.f:
+   Message ID: 1435620133107142787
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 86 from rex.f:
+   Message ID: 1437711141412409394
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 87 from rex.f:
+   Message ID: 1437711199461441596
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 88 from rex.f:
+   Message ID: 1437711267824402512
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 89 from rex.f:
+   Message ID: 1437711327824056340
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 90 from rex.f:
+   Message ID: 1437711434762162236
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 91 from rex.f:
+   Message ID: 1437712149425291390
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 92 from rex.f:
+   Message ID: 1437712272138043414
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 93 from rex.f:
+   Message ID: 1437712678817894490
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 94 from rex.f:
+   Message ID: 1438051524923228243
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 95 from rex.f:
+   Message ID: 1438052134716178472
+   Content: <a:naman_ki_chai:1424343414744551538> Frooti Pita h ^
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 96 from rex.f:
+   Message ID: 1438442520760680521
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 97 from rex.f:
+   Message ID: 1438446775420588032
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 98 from rex.f:
+   Message ID: 1438449320067076167
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 99 from rex.f:
+   Message ID: 1438449353923629099
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 100 from rex.f:
+   Message ID: 1438449387335581699
+   Content: [No content]
+   Attachments: 0
+   Embeds: 0
+   Extracted URLs (0):
+   ℹ️  No image URLs found in this message
+
+📝 Message 101 from rex.f:
+   Message ID: 1438522727983218688
+   Content: [No content]
+   Attachments: 2
+   Embeds: 0
+   Extracted URLs (4):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1438522727307939880/image.png?ex=69192a70&is=6917d8f0&hm=11b80d20228d06b2869e1ef81a0ca3c1c38cd0608181c526439c89eb39f4f67e&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1438522727307939880/image.png?ex=69192a70&is=6917d8f0&hm=11b80d20228d06b2869e1ef81a0ca3c1c38cd0608181c526439c89eb39f4f67e&
+      3. https://cdn.discordapp.com/attachments/1419783509521993929/1438522727647416403/image.png?ex=69192a70&is=6917d8f0&hm=a962c023c531cb54291b47774305f6b4295afeb62dec126401837ec273266da8&
+      4. https://media.discordapp.net/attachments/1419783509521993929/1438522727647416403/image.png?ex=69192a70&is=6917d8f0&hm=a962c023c531cb54291b47774305f6b4295afeb62dec126401837ec273266da8&
+
+   🔍 Verifying 4 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1438522727307939880/image.png?ex=69192a70&is=6917d8f0&hm=11b80d20228d06b2869e1ef81a0ca3c1c38cd0608181c526439c89eb39f4f67e&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1438522727307939880/image.png?ex=69192a70&is=6917d8f0&hm=11b80d20228d06b2869e1ef81a0ca3c1c38cd0608181c526439c89eb39f4f67e&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1438522727647416403/image.png?ex=69192a70&is=6917d8f0&hm=a962c023c531cb54291b47774305f6b4295afeb62dec126401837ec273266da8&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1438522727647416403/image.png?ex=69192a70&is=6917d8f0&hm=a962c023c531cb54291b47774305f6b4295afeb62dec126401837ec273266da8&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 4 valid, 0 invalid
+
+📝 Message 102 from rex.f:
+   Message ID: 1438603287405400126
+   Content: [No content]
+   Attachments: 2
+   Embeds: 0
+   Extracted URLs (4):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1438603286230859836/image.png?ex=69197577&is=691823f7&hm=31dd757a36d6a746d59750b33779e9543470a2f1eb05a3565a6bfa3dcb07c89a&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1438603286230859836/image.png?ex=69197577&is=691823f7&hm=31dd757a36d6a746d59750b33779e9543470a2f1eb05a3565a6bfa3dcb07c89a&
+      3. https://cdn.discordapp.com/attachments/1419783509521993929/1438603286860009472/image.png?ex=69197577&is=691823f7&hm=ca1dea4be29b00e937a98ed340e56253f4a2d8c0da9de59aae7b97b9fc9b803c&
+      4. https://media.discordapp.net/attachments/1419783509521993929/1438603286860009472/image.png?ex=69197577&is=691823f7&hm=ca1dea4be29b00e937a98ed340e56253f4a2d8c0da9de59aae7b97b9fc9b803c&
+
+   🔍 Verifying 4 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1438603286230859836/image.png?ex=69197577&is=691823f7&hm=31dd757a36d6a746d59750b33779e9543470a2f1eb05a3565a6bfa3dcb07c89a&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1438603286230859836/image.png?ex=69197577&is=691823f7&hm=31dd757a36d6a746d59750b33779e9543470a2f1eb05a3565a6bfa3dcb07c89a&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1438603286860009472/image.png?ex=69197577&is=691823f7&hm=ca1dea4be29b00e937a98ed340e56253f4a2d8c0da9de59aae7b97b9fc9b803c&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1438603286860009472/image.png?ex=69197577&is=691823f7&hm=ca1dea4be29b00e937a98ed340e56253f4a2d8c0da9de59aae7b97b9fc9b803c&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 4 valid, 0 invalid
+
+📝 Message 103 from rex.f:
+   Message ID: 1438607362654076928
+   Content: [No content]
+   Attachments: 1
+   Embeds: 0
+   Extracted URLs (2):
+      1. https://cdn.discordapp.com/attachments/1419783509521993929/1438607362389708953/image.png?ex=69197943&is=691827c3&hm=7fbc7962809832123f1d81d517ec5eb25bea04843fd83285da67c52bbda47bca&
+      2. https://media.discordapp.net/attachments/1419783509521993929/1438607362389708953/image.png?ex=69197943&is=691827c3&hm=7fbc7962809832123f1d81d517ec5eb25bea04843fd83285da67c52bbda47bca&
+
+   🔍 Verifying 2 unique URLs...
+
+   🌐 Checking: https://cdn.discordapp.com/attachments/1419783509521993929/1438607362389708953/image.png?ex=69197943&is=691827c3&hm=7fbc7962809832123f1d81d517ec5eb25bea04843fd83285da67c52bbda47bca&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   🌐 Checking: https://media.discordapp.net/attachments/1419783509521993929/1438607362389708953/image.png?ex=69197943&is=691827c3&hm=7fbc7962809832123f1d81d517ec5eb25bea04843fd83285da67c52bbda47bca&
+      Has query params: ✅ YES
+      ✅ VALID - Image accessible and will be saved
+
+   📊 Message Summary: 2 valid, 0 invalid
+
+🔍 ========== IMAGE URL EXTRACTION COMPLETE ==========
+
+
+FINAL STATISTICS:
+Total messages scanned: 103
+Messages with valid images: 34
+Valid images found: 114
+Invalid/unavailable images: 0
+
+Completed at: 2025-11-15T11:31:33.645Z
