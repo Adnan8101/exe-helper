@@ -102,7 +102,7 @@ export const captureDataCommand = {
         authorId: msg.author.id,
         authorName: msg.author.tag,
         authorAvatar: msg.author.displayAvatarURL(),
-        message: msg.content || '[No text content]',
+        message: msg.content || '',
         messageId: msg.id,
         timestamp: msg.createdAt,
         attachments: msg.attachments.map((att) => att.url),

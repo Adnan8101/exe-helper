@@ -383,7 +383,7 @@ export const collectProofCommand = {
                 authorId: msg.author.id,
                 authorName: msg.author.tag,
                 authorAvatar: msg.author.displayAvatarURL(),
-                message: msg.content || '[No text content]',
+                message: '',
                 messageId: msg.id,
                 timestamp: msg.createdAt,
                 imageUrl: imageUrl, // Single image per record

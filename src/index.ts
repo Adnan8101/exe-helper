@@ -261,7 +261,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
             authorId: message.author.id,
             authorName: message.author.tag,
             authorAvatar: message.author.displayAvatarURL(),
-            message: message.content || '[No text content]',
+            message: message.content || '',
             messageId: message.id,
             timestamp: message.createdAt,
             attachments: message.attachments.map(att => att.url),
@@ -307,7 +307,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
       const imageUrls = extractImageUrls(message);
       
       if (imageUrls.length > 0) {
-        // Store proof in database
+        // Store proof in database (no text content, only image URLs)
         await prisma.proof.create({
           data: {
             channelId: message.channelId,
@@ -315,7 +315,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
             authorId: message.author.id,
             authorName: message.author.tag,
             authorAvatar: message.author.displayAvatarURL(),
-            message: message.content || '[No text content]',
+            message: '',
             messageId: message.id,
             timestamp: message.createdAt,
             imageUrls: imageUrls,
@@ -375,7 +375,7 @@ client.on(Events.MessageUpdate, async (oldMessage: Message | PartialMessage, new
           await prisma.vouch.update({
             where: { messageId: message.id },
             data: {
-              message: message.content || '[No text content]',
+              message: message.content || '',
               attachments: message.attachments.map(att => att.url),
               updatedAt: new Date(),
             },
@@ -411,6 +411,53 @@ client.on(Events.MessageUpdate, async (oldMessage: Message | PartialMessage, new
     }
   } catch (error) {
     console.error('❌ Error processing message update:', error);
+  }
+});
+
+// Message delete event listener
+client.on(Events.MessageDelete, async (message: Message | PartialMessage) => {
+  // Fetch full message if partial
+  if (message.partial) {
+    try {
+      await message.fetch();
+    } catch (error) {
+      console.log('⚠️ Could not fetch deleted message');
+      // Continue with partial message
+    }
+  }
+  
+  try {
+    // Check if it's a vouch
+    const vouch = await prisma.vouch.findUnique({
+      where: { messageId: message.id },
+    });
+    
+    if (vouch) {
+      // Delete from database
+      await prisma.vouch.delete({
+        where: { messageId: message.id },
+      });
+      
+      console.log(`🗑️ Vouch deleted from database (message deleted by user): ${message.id}`);
+      return;
+    }
+    
+    // Check if it's a proof
+    const proof = await prisma.proof.findUnique({
+      where: { messageId: message.id },
+    });
+    
+    if (proof) {
+      // Delete from database
+      await prisma.proof.delete({
+        where: { messageId: message.id },
+      });
+      
+      console.log(`🗑️ Proof deleted from database (message deleted by user): ${message.id}`);
+      return;
+    }
+  } catch (error) {
+    console.error('❌ Error processing message deletion:', error);
   }
 });
 
