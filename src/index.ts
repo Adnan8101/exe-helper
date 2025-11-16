@@ -1,4 +1,4 @@
-import { Client, GatewayIntentBits, Events, REST, Routes, Message, PartialMessage } from 'discord.js';
+import { Client, GatewayIntentBits, Events, REST, Routes, Message, PartialMessage, Partials } from 'discord.js';
 import { config } from 'dotenv';
 import { captureDataCommand } from './commands/captureData';
 import { collectProofCommand } from './commands/collectProof';
@@ -53,6 +53,10 @@ const client = new Client({
     GatewayIntentBits.GuildMessages,
     GatewayIntentBits.MessageContent,
     GatewayIntentBits.GuildMembers, // Required to access role members
+  ],
+  partials: [
+    Partials.Message,
+    Partials.Channel,
   ],
 });
 
