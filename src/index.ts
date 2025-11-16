@@ -262,32 +262,87 @@ client.on(Events.MessageCreate, async (message: Message) => {
     if (isAutoVouchChannel(message.channelId)) {
       // Validate the vouch
       if (isValidVouch(message)) {
-        // Store vouch in database
-        await prisma.vouch.create({
-          data: {
-            channelId: message.channelId,
-            channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
-            authorId: message.author.id,
-            authorName: message.author.tag,
-            authorAvatar: message.author.displayAvatarURL(),
-            message: message.content || '',
-            messageId: message.id,
-            timestamp: message.createdAt,
-            attachments: message.attachments.map(att => att.url),
-          },
-        });
-        
-        // Send success message and delete after 3 seconds
-        const successMsg = await message.reply('✅ Vouch added successfully!');
-        setTimeout(async () => {
-          try {
-            await successMsg.delete();
-          } catch (error) {
-            console.log('⚠️ Could not delete success message');
+        try {
+          // Check if vouch with this messageId already exists
+          const existingVouch = await prisma.vouch.findUnique({
+            where: { messageId: message.id }
+          });
+          
+          if (existingVouch) {
+            // Vouch already exists, update it
+            await prisma.vouch.update({
+              where: { messageId: message.id },
+              data: {
+                message: message.content || '',
+                attachments: message.attachments.map(att => att.url),
+                authorName: message.author.tag,
+                authorAvatar: message.author.displayAvatarURL(),
+                updatedAt: new Date(),
+              },
+            });
+            console.log(`🔄 Auto-vouch updated: ${message.id} from ${message.author.tag}`);
+          } else {
+            // Create new vouch - each message ID is unique, one user can have multiple vouches
+            let retries = 3;
+            let created = false;
+            
+            while (retries > 0 && !created) {
+              try {
+                await prisma.vouch.create({
+                  data: {
+                    channelId: message.channelId,
+                    channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
+                    authorId: message.author.id,
+                    authorName: message.author.tag,
+                    authorAvatar: message.author.displayAvatarURL(),
+                    message: message.content || '',
+                    messageId: message.id,
+                    timestamp: message.createdAt,
+                    attachments: message.attachments.map(att => att.url),
+                  },
+                });
+                created = true;
+                
+                // Send success message and delete after 3 seconds
+                const successMsg = await message.reply('✅ Vouch added successfully!');
+                setTimeout(async () => {
+                  try {
+                    await successMsg.delete();
+                  } catch (error) {
+                    console.log('⚠️ Could not delete success message');
+                  }
+                }, 3000);
+                
+                console.log(`✅ Auto-vouch saved: ${message.id} from ${message.author.tag}`);
+              } catch (createError: any) {
+                if (createError.code === 'P2002') {
+                  // Unique constraint violation - check if it's messageId or vouchNumber
+                  if (createError.meta?.target?.includes('messageId')) {
+                    // MessageId conflict - this message already exists, stop retrying
+                    console.log(`⚠️ Vouch with messageId already exists: ${message.id}`);
+                    break;
+                  } else if (createError.meta?.target?.includes('vouchNumber')) {
+                    // VouchNumber conflict - retry after small delay
+                    retries--;
+                    if (retries > 0) {
+                      console.log(`⚠️ VouchNumber conflict, retrying... (${retries} attempts left)`);
+                      await new Promise(resolve => setTimeout(resolve, 100));
+                    } else {
+                      console.error(`❌ Failed to create vouch after retries: ${message.id}`);
+                      // Try to fix the sequence
+                      await prisma.$executeRaw`SELECT setval(pg_get_serial_sequence('"Vouch"', 'vouchNumber'), COALESCE((SELECT MAX("vouchNumber") FROM "Vouch"), 0) + 1, false);`;
+                    }
+                  }
+                } else {
+                  console.error('❌ Unexpected error creating vouch:', createError.message);
+                  break;
+                }
+              }
+            }
           }
-        }, 3000);
-        
-        console.log(`✅ Auto-vouch saved: ${message.id} from ${message.author.tag}`);
+        } catch (error: any) {
+          console.error('❌ Error processing vouch:', error.message);
+        }
       } else {
         // Invalid vouch - delete and send warning
         try {
@@ -316,22 +371,84 @@ client.on(Events.MessageCreate, async (message: Message) => {
       const imageUrls = extractImageUrls(message);
       
       if (imageUrls.length > 0) {
-        // Store proof in database (no text content, only image URLs)
-        await prisma.proof.create({
-          data: {
-            channelId: message.channelId,
-            channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
-            authorId: message.author.id,
-            authorName: message.author.tag,
-            authorAvatar: message.author.displayAvatarURL(),
-            message: '',
-            messageId: message.id,
-            timestamp: message.createdAt,
-            imageUrls: imageUrls,
-          },
-        });
+        // Extract message ID from content (user should type the vouch message ID)
+        const messageIdMatch = message.content.match(/\b\d{17,19}\b/);
+        let vouchMessageId: string | null = null;
         
-        console.log(`✅ Auto-proof saved: ${message.id} from ${message.author.tag} (${imageUrls.length} images)`);
+        if (messageIdMatch) {
+          vouchMessageId = messageIdMatch[0];
+          
+          // Try to find the vouch with this message ID
+          const vouch = await prisma.vouch.findUnique({
+            where: { messageId: vouchMessageId },
+          });
+          
+          if (vouch && imageUrls.length > 0) {
+            // Update the vouch with the first proof URL
+            await prisma.vouch.update({
+              where: { messageId: vouchMessageId },
+              data: { proofUrl: imageUrls[0] },
+            });
+            
+            // Send confirmation
+            const confirmMsg = await message.reply(`✅ Proof linked to vouch #${vouch.vouchNumber}!`);
+            setTimeout(async () => {
+              try {
+                await confirmMsg.delete();
+              } catch (error) {
+                console.log('⚠️ Could not delete confirmation message');
+              }
+            }, 5000);
+            
+            console.log(`✅ Proof linked to vouch #${vouch.vouchNumber} (${vouchMessageId})`);
+          }
+        }
+        
+        try {
+          // Check if proof with this messageId already exists
+          const existingProof = await prisma.proof.findUnique({
+            where: { messageId: message.id }
+          });
+          
+          if (existingProof) {
+            // Proof already exists, update it
+            await prisma.proof.update({
+              where: { messageId: message.id },
+              data: {
+                message: message.content || '',
+                imageUrls: imageUrls,
+                authorName: message.author.tag,
+                authorAvatar: message.author.displayAvatarURL(),
+                updatedAt: new Date(),
+              },
+            });
+            console.log(`🔄 Auto-proof updated: ${message.id} from ${message.author.tag} (${imageUrls.length} images)`);
+          } else {
+            // Create new proof
+            await prisma.proof.create({
+              data: {
+                channelId: message.channelId,
+                channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
+                authorId: message.author.id,
+                authorName: message.author.tag,
+                authorAvatar: message.author.displayAvatarURL(),
+                message: message.content || '',
+                messageId: message.id,
+                timestamp: message.createdAt,
+                imageUrls: imageUrls,
+              },
+            });
+            
+            console.log(`✅ Auto-proof saved: ${message.id} from ${message.author.tag} (${imageUrls.length} images)`);
+          }
+        } catch (error: any) {
+          // Handle any unexpected errors
+          if (error.code === 'P2002') {
+            console.log(`⚠️ Duplicate constraint error for proof: ${message.id}`);
+          } else {
+            console.error('❌ Error saving proof:', error.message);
+          }
+        }
       }
       // If no images, just ignore the message
     }
