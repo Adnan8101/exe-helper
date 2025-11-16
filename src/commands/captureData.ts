@@ -305,13 +305,22 @@ export async function handleButtonInteraction(interaction: ButtonInteraction) {
         components: [],
       });
       
+      // Get the current max vouch number to start from
+      const maxVouchNumber = await prisma.vouch.aggregate({
+        _max: {
+          vouchNumber: true,
+        },
+      });
+      let currentVouchNumber = (maxVouchNumber._max.vouchNumber || 0) + 1;
+      
       // Process in batches for real-time updates
       const startTime = Date.now();
       for (let i = 0; i < data.length; i += batchSize) {
         const batch = data.slice(i, Math.min(i + batchSize, data.length));
         
         await prisma.vouch.createMany({
-          data: batch.map((item) => ({
+          data: batch.map((item, index) => ({
+            vouchNumber: currentVouchNumber + index,
             channelId: channelId,
             channelName: channelName,
             authorId: item.authorId,
@@ -324,6 +333,9 @@ export async function handleButtonInteraction(interaction: ButtonInteraction) {
           })),
           skipDuplicates: true,
         });
+        
+        // Update the vouch number counter for the next batch
+        currentVouchNumber += batch.length;
         
         processed += batch.length;
         const percentage = Math.round((processed / totalRecords) * 100);
