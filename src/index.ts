@@ -292,8 +292,17 @@ client.on(Events.MessageCreate, async (message: Message) => {
             
             while (retries > 0 && !created) {
               try {
+                // Get the highest vouch number and increment by 1
+                const maxVouchNumber = await prisma.vouch.aggregate({
+                  _max: {
+                    vouchNumber: true,
+                  },
+                });
+                const nextVouchNumber = (maxVouchNumber._max.vouchNumber || 0) + 1;
+                
                 await prisma.vouch.create({
                   data: {
+                    vouchNumber: nextVouchNumber,
                     channelId: message.channelId,
                     channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
                     authorId: message.author.id,

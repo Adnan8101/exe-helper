@@ -15,7 +15,7 @@ datasource db {
 
 model Vouch {
   id            String   @id @default(cuid())
-  vouchNumber   Int      @unique @default(autoincrement())
+  vouchNumber   Int      @unique
   channelId     String
   channelName   String
   authorId      String
