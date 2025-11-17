@@ -10,7 +10,7 @@ const TEAM_CONFIG = {
   GIRL_OWNER_IDS: ['671775289252118528', '965996958466605056'],
   MANAGER_IDS: ['785398118095126570', '1255565188829155388', '1391157574958710835', '930109353137176586'],
   EARLY_SUPPORT_ROLE_ID: '1395736628793839646',
-  GUILD_ID: '449751480375705601', // EXE Server ID
+  GUILD_ID: '449751480375705601', 
 };
 
 // Monitoring state
@@ -138,13 +138,13 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         const existing = existingMap.get(girlOwnerId);
         const avatarUrl = girlOwner.user.displayAvatarURL({ size: 1024 });
         
-        if (existing?.username === girlOwner.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'GirlOwner') {
+        if (existing?.username === girlOwner.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'Girl Owner') {
           counters.skipped++;
         } else {
           await prisma.teamMember.upsert({
             where: { userId: girlOwnerId },
-            update: { username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
-            create: { userId: girlOwnerId, username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
+            update: { username: girlOwner.user.username, avatarUrl, role: 'Girl Owner', order: i },
+            create: { userId: girlOwnerId, username: girlOwner.user.username, avatarUrl, role: 'Girl Owner', order: i },
           });
           counters.owners++;
         }
@@ -197,6 +197,7 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         const allCoreTeamIds = [
           TEAM_CONFIG.FOUNDER_ID,
           ...TEAM_CONFIG.OWNER_IDS,
+          ...TEAM_CONFIG.GIRL_OWNER_IDS,
           ...TEAM_CONFIG.MANAGER_IDS
         ];
         
@@ -212,14 +213,14 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         if (currentSupporterIds.length > 0) {
           await prisma.teamMember.deleteMany({
             where: {
-              role: 'EarlySupport',
+              role: 'Early Support',
               userId: { notIn: currentSupporterIds },
             },
           });
         } else {
           // No early supporters, remove all
           await prisma.teamMember.deleteMany({
-            where: { role: 'EarlySupport' },
+            where: { role: 'Early Support' },
           });
         }
 
@@ -235,14 +236,14 @@ export async function execute(interaction: ChatInputCommandInteraction) {
           const existing = existingMap.get(userId);
           const avatarUrl = member.user.displayAvatarURL({ size: 1024 });
           
-          if (existing?.username === member.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'EarlySupport') {
+          if (existing?.username === member.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'Early Support') {
             counters.skipped++;
           } else {
             try {
               await prisma.teamMember.upsert({
                 where: { userId },
-                update: { username: member.user.username, avatarUrl, role: 'EarlySupport', order },
-                create: { userId, username: member.user.username, avatarUrl, role: 'EarlySupport', order },
+                update: { username: member.user.username, avatarUrl, role: 'Early Support', order },
+                create: { userId, username: member.user.username, avatarUrl, role: 'Early Support', order },
               });
               counters.earlySupport++;
             } catch (error) {

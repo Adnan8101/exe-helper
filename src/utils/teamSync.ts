@@ -99,8 +99,8 @@ export async function syncTeamMembers(client: Client) {
 
           await prisma.teamMember.upsert({
             where: { userId: girlOwnerId },
-            update: { username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
-            create: { userId: girlOwnerId, username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
+            update: { username: girlOwner.user.username, avatarUrl, role: 'Girl Owner', order: i },
+            create: { userId: girlOwnerId, username: girlOwner.user.username, avatarUrl, role: 'Girl Owner', order: i },
           });
           counters.synced++;
         }).catch((error) => {
@@ -155,6 +155,7 @@ export async function syncTeamMembers(client: Client) {
       const allCoreTeamIds = [
         TEAM_CONFIG.FOUNDER_ID,
         ...TEAM_CONFIG.OWNER_IDS,
+        ...TEAM_CONFIG.GIRL_OWNER_IDS,
         ...TEAM_CONFIG.MANAGER_IDS
       ];
       
@@ -167,13 +168,13 @@ export async function syncTeamMembers(client: Client) {
       if (currentSupporterIds.length > 0) {
         await prisma.teamMember.deleteMany({
           where: {
-            role: 'EarlySupport',
+            role: 'Early Support',
             userId: { notIn: currentSupporterIds },
           },
         });
       } else {
         await prisma.teamMember.deleteMany({
-          where: { role: 'EarlySupport' },
+          where: { role: 'Early Support' },
         });
       }
 
@@ -184,7 +185,7 @@ export async function syncTeamMembers(client: Client) {
         const existing = existingMap.get(userId);
         const avatarUrl = member.user.displayAvatarURL({ size: 1024 });
         
-        if (existing?.username === member.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'EarlySupport') {
+        if (existing?.username === member.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'Early Support') {
           counters.skipped++;
           order++;
           continue;
@@ -193,8 +194,8 @@ export async function syncTeamMembers(client: Client) {
         supporterOps.push(
           prisma.teamMember.upsert({
             where: { userId },
-            update: { username: member.user.username, avatarUrl, role: 'EarlySupport', order },
-            create: { userId, username: member.user.username, avatarUrl, role: 'EarlySupport', order },
+            update: { username: member.user.username, avatarUrl, role: 'Early Support', order },
+            create: { userId, username: member.user.username, avatarUrl, role: 'Early Support', order },
           }).then(() => counters.synced++)
         );
         order++;
@@ -239,6 +240,7 @@ export function setupTeamSync(client: Client) {
     const isTeamMember = [
       TEAM_CONFIG.FOUNDER_ID,
       ...TEAM_CONFIG.OWNER_IDS,
+      ...TEAM_CONFIG.GIRL_OWNER_IDS,
       ...TEAM_CONFIG.MANAGER_IDS,
     ].includes(newMember.id) || hasRole;
     
@@ -281,6 +283,7 @@ export function setupTeamSync(client: Client) {
     const isTeamMember = [
       TEAM_CONFIG.FOUNDER_ID,
       ...TEAM_CONFIG.OWNER_IDS,
+      ...TEAM_CONFIG.GIRL_OWNER_IDS,
       ...TEAM_CONFIG.MANAGER_IDS,
     ].includes(newUser.id);
     
