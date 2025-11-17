@@ -168,6 +168,11 @@ client.on(Events.InteractionCreate, async (interaction) => {
       const { handleFlushButtonInteraction } = await import('./commands/flushProof');
       await handleFlushButtonInteraction(interaction);
     }
+    
+    // Handle team stats update button
+    if (customId === 'update_team_stats') {
+      await syncTeamCommand.handleButtonInteraction(interaction);
+    }
   }
 });
 

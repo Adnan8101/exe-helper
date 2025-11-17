@@ -1,4 +1,4 @@
-import { SlashCommandBuilder, ChatInputCommandInteraction, PermissionFlagsBits, EmbedBuilder } from 'discord.js';
+import { SlashCommandBuilder, ChatInputCommandInteraction, PermissionFlagsBits, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle, ButtonInteraction, Message } from 'discord.js';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -15,6 +15,8 @@ const TEAM_CONFIG = {
 
 // Monitoring state
 let isMonitoringEnabled = false;
+let liveMonitorMessage: Message | null = null;
+let liveMonitorInterval: NodeJS.Timeout | null = null;
 
 export const data = new SlashCommandBuilder()
   .setName('synctream')
@@ -22,7 +24,7 @@ export const data = new SlashCommandBuilder()
   .addSubcommand(subcommand =>
     subcommand
       .setName('enable')
-      .setDescription('Enable real-time team monitoring'))
+      .setDescription('Enable real-time team monitoring with live embed'))
   .addSubcommand(subcommand =>
     subcommand
       .setName('disable')
@@ -33,31 +35,126 @@ export function isMonitoring(): boolean {
   return isMonitoringEnabled;
 }
 
+async function getTeamStats() {
+  const teamMembers = await prisma.teamMember.findMany({
+    orderBy: [{ order: 'asc' }],
+  });
+
+  const grouped = {
+    founder: teamMembers.filter(m => m.role === 'Founder'),
+    owners: teamMembers.filter(m => m.role === 'Owner'),
+    girlOwners: teamMembers.filter(m => m.role === 'Girl Owner'),
+    managers: teamMembers.filter(m => m.role === 'Manager'),
+    earlySupport: teamMembers.filter(m => m.role === 'Early Support'),
+  };
+
+  return grouped;
+}
+
+function createStatsEmbed(stats: Awaited<ReturnType<typeof getTeamStats>>, lastUpdate: Date) {
+  const embed = new EmbedBuilder()
+    .setColor(0xc9a76f)
+    .setTitle('📊 Team Statistics - Live Monitor')
+    .setDescription('Real-time team member counts updating every 10 seconds')
+    .addFields(
+      { name: '👑 Founders', value: `\`${stats.founder.length}\``, inline: true },
+      { name: '🔱 Owners', value: `\`${stats.owners.length}\``, inline: true },
+      { name: '💖 Girl Owners', value: `\`${stats.girlOwners.length}\``, inline: true },
+      { name: '⚙️ Managers', value: `\`${stats.managers.length}\``, inline: true },
+      { name: '🌟 Early Support', value: `\`${stats.earlySupport.length}\``, inline: true },
+      { name: '📈 Total', value: `\`${stats.founder.length + stats.owners.length + stats.girlOwners.length + stats.managers.length + stats.earlySupport.length}\``, inline: true },
+    )
+    .setFooter({ text: `Last Update: ${lastUpdate.toLocaleString('en-US', { timeZone: 'UTC', hour12: true })}` })
+    .setTimestamp();
+
+  return embed;
+}
+
+function createUpdateButton() {
+  const row = new ActionRowBuilder<ButtonBuilder>()
+    .addComponents(
+      new ButtonBuilder()
+        .setCustomId('update_team_stats')
+        .setLabel('🔄 Update Now')
+        .setStyle(ButtonStyle.Primary)
+    );
+  return row;
+}
+
+async function updateLiveMonitor() {
+  if (!liveMonitorMessage) return;
+
+  try {
+    const stats = await getTeamStats();
+    const embed = createStatsEmbed(stats, new Date());
+    const button = createUpdateButton();
+
+    await liveMonitorMessage.edit({ embeds: [embed], components: [button] });
+  } catch (error) {
+    console.error('[Live Monitor] Error updating:', error);
+  }
+}
+
+export async function handleButtonInteraction(interaction: ButtonInteraction) {
+  if (interaction.customId === 'update_team_stats') {
+    await interaction.deferUpdate();
+    await updateLiveMonitor();
+  }
+}
+
 export async function execute(interaction: ChatInputCommandInteraction) {
   const subcommand = interaction.options.getSubcommand();
 
   if (subcommand === 'enable') {
     isMonitoringEnabled = true;
 
-    const embed = new EmbedBuilder()
-      .setColor(0x00FF00)
-      .setTitle('✅ Done')
-      .setDescription('Now I will monitor all users **real time**\n**Real time**\n**Live instantly**\n\nNo need to run command manually')
-      .setTimestamp();
+    // Stop existing interval if any
+    if (liveMonitorInterval) {
+      clearInterval(liveMonitorInterval);
+    }
 
-    await interaction.reply({ embeds: [embed] });
+    // Get initial stats
+    const stats = await getTeamStats();
+    const embed = createStatsEmbed(stats, new Date());
+    const button = createUpdateButton();
+
+    // Send the live monitor message
+    const message = await interaction.reply({ 
+      embeds: [embed], 
+      components: [button],
+      fetchReply: true 
+    });
+
+    liveMonitorMessage = message as Message;
+
+    // Set up auto-update every 10 seconds
+    liveMonitorInterval = setInterval(async () => {
+      await updateLiveMonitor();
+    }, 10000); // 10 seconds
+
+    console.log('[Live Monitor] ✅ Enabled - Updating every 10 seconds');
     return;
 
   } else if (subcommand === 'disable') {
     isMonitoringEnabled = false;
 
+    // Stop the interval
+    if (liveMonitorInterval) {
+      clearInterval(liveMonitorInterval);
+      liveMonitorInterval = null;
+    }
+
+    // Clear the message reference
+    liveMonitorMessage = null;
+
     const embed = new EmbedBuilder()
       .setColor(0xFF0000)
       .setTitle('🛑 Monitoring Disabled')
-      .setDescription('Real-time monitoring has been turned off.')
+      .setDescription('Real-time monitoring has been turned off.\nThe live stats embed will no longer update.')
       .setTimestamp();
 
-    await interaction.reply({ embeds: [embed] });
+    await interaction.reply({ embeds: [embed], ephemeral: true });
+    console.log('[Live Monitor] 🛑 Disabled');
     return;
   }
 
