@@ -6,7 +6,8 @@ const prisma = new PrismaClient();
 // Team member configurations
 const TEAM_CONFIG = {
   FOUNDER_ID: '959653911923396629',
-  OWNER_IDS: ['643480211421265930', '283127777383809024', '671775289252118528', '965996958466605056'],
+  OWNER_IDS: ['643480211421265930', '283127777383809024'],
+  GIRL_OWNER_IDS: ['671775289252118528', '965996958466605056'],
   MANAGER_IDS: ['785398118095126570', '1255565188829155388', '1391157574958710835', '930109353137176586'],
   EARLY_SUPPORT_ROLE_ID: '1395736628793839646',
   GUILD_ID: '449751480375705601', // EXE Server ID
@@ -79,6 +80,31 @@ export async function syncTeamMembers(client: Client) {
           counters.synced++;
         }).catch((error) => {
           console.error(`[Team Sync] Error syncing owner ${ownerId}:`, error);
+          counters.errors++;
+        })
+      );
+    });
+
+    // Sync Girl Owners (parallel)
+    TEAM_CONFIG.GIRL_OWNER_IDS.forEach((girlOwnerId, i) => {
+      operations.push(
+        guild.members.fetch(girlOwnerId).then(async (girlOwner) => {
+          const existing = existingMap.get(girlOwnerId);
+          const avatarUrl = girlOwner.user.displayAvatarURL({ size: 1024 });
+          
+          if (existing?.username === girlOwner.user.username && existing?.avatarUrl === avatarUrl) {
+            counters.skipped++;
+            return;
+          }
+
+          await prisma.teamMember.upsert({
+            where: { userId: girlOwnerId },
+            update: { username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
+            create: { userId: girlOwnerId, username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
+          });
+          counters.synced++;
+        }).catch((error) => {
+          console.error(`[Team Sync] Error syncing girl owner ${girlOwnerId}:`, error);
           counters.errors++;
         })
       );

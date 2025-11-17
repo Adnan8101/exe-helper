@@ -6,7 +6,8 @@ const prisma = new PrismaClient();
 // Team member configurations
 const TEAM_CONFIG = {
   FOUNDER_ID: '959653911923396629',
-  OWNER_IDS: ['643480211421265930', '283127777383809024','671775289252118528','965996958466605056'],
+  OWNER_IDS: ['643480211421265930', '283127777383809024'],
+  GIRL_OWNER_IDS: ['671775289252118528', '965996958466605056'],
   MANAGER_IDS: ['785398118095126570', '1255565188829155388', '1391157574958710835', '930109353137176586'],
   EARLY_SUPPORT_ROLE_ID: '1395736628793839646',
   GUILD_ID: '449751480375705601', // EXE Server ID
@@ -123,6 +124,32 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         }
       } catch (error) {
         console.error(`Error syncing owner ${ownerId}:`, error);
+        counters.errors++;
+      }
+    }
+
+    // Process Girl Owners one by one
+    for (let i = 0; i < TEAM_CONFIG.GIRL_OWNER_IDS.length; i++) {
+      await interaction.editReply(`🔄 **Syncing team members...**\n⏳ Processing girl owner (${i + 1}/${TEAM_CONFIG.GIRL_OWNER_IDS.length})...`);
+      const girlOwnerId = TEAM_CONFIG.GIRL_OWNER_IDS[i];
+      
+      try {
+        const girlOwner = await guild.members.fetch(girlOwnerId);
+        const existing = existingMap.get(girlOwnerId);
+        const avatarUrl = girlOwner.user.displayAvatarURL({ size: 1024 });
+        
+        if (existing?.username === girlOwner.user.username && existing?.avatarUrl === avatarUrl && existing?.role === 'GirlOwner') {
+          counters.skipped++;
+        } else {
+          await prisma.teamMember.upsert({
+            where: { userId: girlOwnerId },
+            update: { username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
+            create: { userId: girlOwnerId, username: girlOwner.user.username, avatarUrl, role: 'GirlOwner', order: i },
+          });
+          counters.owners++;
+        }
+      } catch (error) {
+        console.error(`Error syncing girl owner ${girlOwnerId}:`, error);
         counters.errors++;
       }
     }
