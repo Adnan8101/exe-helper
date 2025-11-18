@@ -299,6 +299,13 @@ client.on(Events.MessageCreate, async (message: Message) => {
             let retries = 3;
             let created = false;
             
+            // Extract mentioned user ID for vouch target (if not author)
+            let vouchedUserId = message.author.id; // Default to author
+            if (message.mentions.users.size > 0) {
+              // Use the first mentioned user as the vouched user
+              vouchedUserId = message.mentions.users.first()!.id;
+            }
+            
             while (retries > 0 && !created) {
               try {
                 // Get the highest vouch number and increment by 1
@@ -317,6 +324,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
                     authorId: message.author.id,
                     authorName: message.author.globalName || message.author.username,
                     authorAvatar: message.author.displayAvatarURL(),
+                    vouchedUserId: vouchedUserId, // Store the vouched user ID
                     message: message.content || '',
                     messageId: message.id,
                     timestamp: message.createdAt,

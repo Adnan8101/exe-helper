@@ -21,6 +21,7 @@ model Vouch {
   authorId      String
   authorName    String
   authorAvatar  String?
+  vouchedUserId String?  // User being vouched for (if different from author)
   message       String   @db.Text
   messageId     String   @unique
   timestamp     DateTime
@@ -31,6 +32,7 @@ model Vouch {
 
   @@index([channelId])
   @@index([authorId])
+  @@index([vouchedUserId])
   @@index([timestamp])
   @@index([vouchNumber])
 }

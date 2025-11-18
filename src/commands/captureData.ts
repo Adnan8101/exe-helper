@@ -326,6 +326,7 @@ export async function handleButtonInteraction(interaction: ButtonInteraction) {
             authorId: item.authorId,
             authorName: item.authorName,
             authorAvatar: item.authorAvatar,
+            vouchedUserId: item.authorId, // Default to author for imported data
             message: item.message,
             messageId: item.messageId,
             timestamp: item.timestamp,

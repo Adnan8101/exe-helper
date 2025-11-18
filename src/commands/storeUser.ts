@@ -153,6 +153,7 @@ export const storeUserCommand = {
                 authorId: userData.userId,
                 authorName: userData.username,
                 authorAvatar: userData.avatarUrl,
+                vouchedUserId: userData.userId, // Self-vouch for stored users
                 message: `[User stored via /store-user command - ${userData.messageCount} messages in ${channel.name}]`,
                 messageId: `stored_${userData.userId}_${Date.now()}`,
                 timestamp: userData.firstSeen,
