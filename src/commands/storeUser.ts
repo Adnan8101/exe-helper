@@ -98,11 +98,11 @@ export const storeUserCommand = {
           existingData.messageCount++;
           existingData.lastSeen = msg.createdAt;
         } else {
-          // Create new user data - use displayName (globalName) or fallback to username
-          const displayName = msg.author.globalName || msg.author.username;
+          // Create new user data - use username only (not display name)
+          const username = msg.author.username;
           userMap.set(userId, {
             userId: msg.author.id,
-            username: displayName,
+            username: username,
             avatarUrl: msg.author.displayAvatarURL(),
             messageCount: 1,
             firstSeen: msg.createdAt,

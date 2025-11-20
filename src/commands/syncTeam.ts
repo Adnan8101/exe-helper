@@ -209,16 +209,16 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         const existing = existingMap.get(ownerId);
         const avatarUrl = owner.user.displayAvatarURL({ size: 1024 });
         
-        // Use displayName (globalName) or fallback to username for consistent display
-        const displayName = owner.user.globalName || owner.user.username;
+        // Use username only (not display name)
+        const username = owner.user.username;
         
-        if (existing?.username === displayName && existing?.avatarUrl === avatarUrl && existing?.role === 'Owner') {
+        if (existing?.username === username && existing?.avatarUrl === avatarUrl && existing?.role === 'Owner') {
           counters.skipped++;
         } else {
           await prisma.teamMember.upsert({
             where: { userId: ownerId },
-            update: { username: displayName, avatarUrl, role: 'Owner', order: i },
-            create: { userId: ownerId, username: displayName, avatarUrl, role: 'Owner', order: i },
+            update: { username: username, avatarUrl, role: 'Owner', order: i },
+            create: { userId: ownerId, username: username, avatarUrl, role: 'Owner', order: i },
           });
           counters.owners++;
         }
@@ -238,16 +238,16 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         const existing = existingMap.get(girlOwnerId);
         const avatarUrl = girlOwner.user.displayAvatarURL({ size: 1024 });
         
-        // Use displayName (globalName) or fallback to username for consistent display
-        const displayName = girlOwner.user.globalName || girlOwner.user.username;
+        // Use username only (not display name)
+        const username = girlOwner.user.username;
         
-        if (existing?.username === displayName && existing?.avatarUrl === avatarUrl && existing?.role === 'Girl Owner') {
+        if (existing?.username === username && existing?.avatarUrl === avatarUrl && existing?.role === 'Girl Owner') {
           counters.skipped++;
         } else {
           await prisma.teamMember.upsert({
             where: { userId: girlOwnerId },
-            update: { username: displayName, avatarUrl, role: 'Girl Owner', order: i },
-            create: { userId: girlOwnerId, username: displayName, avatarUrl, role: 'Girl Owner', order: i },
+            update: { username: username, avatarUrl, role: 'Girl Owner', order: i },
+            create: { userId: girlOwnerId, username: username, avatarUrl, role: 'Girl Owner', order: i },
           });
           counters.owners++;
         }
@@ -267,16 +267,16 @@ export async function execute(interaction: ChatInputCommandInteraction) {
         const existing = existingMap.get(managerId);
         const avatarUrl = manager.user.displayAvatarURL({ size: 1024 });
         
-        // Use displayName (globalName) or fallback to username for consistent display
-        const displayName = manager.user.globalName || manager.user.username;
+        // Use username only (not display name)
+        const username = manager.user.username;
         
-        if (existing?.username === displayName && existing?.avatarUrl === avatarUrl && existing?.role === 'Manager') {
+        if (existing?.username === username && existing?.avatarUrl === avatarUrl && existing?.role === 'Manager') {
           counters.skipped++;
         } else {
           await prisma.teamMember.upsert({
             where: { userId: managerId },
-            update: { username: displayName, avatarUrl, role: 'Manager', order: i },
-            create: { userId: managerId, username: displayName, avatarUrl, role: 'Manager', order: i },
+            update: { username: username, avatarUrl, role: 'Manager', order: i },
+            create: { userId: managerId, username: username, avatarUrl, role: 'Manager', order: i },
           });
           counters.managers++;
         }
@@ -342,17 +342,17 @@ export async function execute(interaction: ChatInputCommandInteraction) {
           const existing = existingMap.get(userId);
           const avatarUrl = member.user.displayAvatarURL({ size: 1024 });
           
-          // Use displayName (globalName) or fallback to username for consistent display
-          const displayName = member.user.globalName || member.user.username;
+          // Use username only (not display name)
+          const username = member.user.username;
           
-          if (existing?.username === displayName && existing?.avatarUrl === avatarUrl && existing?.role === 'Early Support') {
+          if (existing?.username === username && existing?.avatarUrl === avatarUrl && existing?.role === 'Early Support') {
             counters.skipped++;
           } else {
             try {
               await prisma.teamMember.upsert({
                 where: { userId },
-                update: { username: displayName, avatarUrl, role: 'Early Support', order },
-                create: { userId, username: displayName, avatarUrl, role: 'Early Support', order },
+                update: { username: username, avatarUrl, role: 'Early Support', order },
+                create: { userId, username: username, avatarUrl, role: 'Early Support', order },
               });
               counters.earlySupport++;
             } catch (error) {

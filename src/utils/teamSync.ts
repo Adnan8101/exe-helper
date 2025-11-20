@@ -43,18 +43,18 @@ export async function syncTeamMembers(client: Client) {
         const existing = existingMap.get(TEAM_CONFIG.FOUNDER_ID);
         const avatarUrl = founder.user.displayAvatarURL({ size: 1024 });
         
-        // Use displayName (globalName) or fallback to username for consistent display
-        const displayName = founder.user.globalName || founder.user.username;
+        // Use username only (not display name)
+        const username = founder.user.username;
         
-        if (existing?.username === displayName && existing?.avatarUrl === avatarUrl) {
+        if (existing?.username === username && existing?.avatarUrl === avatarUrl) {
           counters.skipped++;
           return;
         }
 
         await prisma.teamMember.upsert({
           where: { userId: TEAM_CONFIG.FOUNDER_ID },
-          update: { username: displayName, avatarUrl, role: 'Founder', order: 0 },
-          create: { userId: TEAM_CONFIG.FOUNDER_ID, username: displayName, avatarUrl, role: 'Founder', order: 0 },
+          update: { username: username, avatarUrl, role: 'Founder', order: 0 },
+          create: { userId: TEAM_CONFIG.FOUNDER_ID, username: username, avatarUrl, role: 'Founder', order: 0 },
         });
         counters.synced++;
       }).catch((error) => {
@@ -70,18 +70,18 @@ export async function syncTeamMembers(client: Client) {
           const existing = existingMap.get(ownerId);
           const avatarUrl = owner.user.displayAvatarURL({ size: 1024 });
           
-          // Use displayName (globalName) or fallback to username for consistent display
-          const displayName = owner.user.globalName || owner.user.username;
+          // Use username only (not display name)
+          const username = owner.user.username;
           
-          if (existing?.username === displayName && existing?.avatarUrl === avatarUrl) {
+          if (existing?.username === username && existing?.avatarUrl === avatarUrl) {
             counters.skipped++;
             return;
           }
 
           await prisma.teamMember.upsert({
             where: { userId: ownerId },
-            update: { username: displayName, avatarUrl, role: 'Owner', order: i },
-            create: { userId: ownerId, username: displayName, avatarUrl, role: 'Owner', order: i },
+            update: { username: username, avatarUrl, role: 'Owner', order: i },
+            create: { userId: ownerId, username: username, avatarUrl, role: 'Owner', order: i },
           });
           counters.synced++;
         }).catch((error) => {
@@ -98,18 +98,18 @@ export async function syncTeamMembers(client: Client) {
           const existing = existingMap.get(girlOwnerId);
           const avatarUrl = girlOwner.user.displayAvatarURL({ size: 1024 });
           
-          // Use displayName (globalName) or fallback to username for consistent display
-          const displayName = girlOwner.user.globalName || girlOwner.user.username;
+          // Use username only (not display name)
+          const username = girlOwner.user.username;
           
-          if (existing?.username === displayName && existing?.avatarUrl === avatarUrl) {
+          if (existing?.username === username && existing?.avatarUrl === avatarUrl) {
             counters.skipped++;
             return;
           }
 
           await prisma.teamMember.upsert({
             where: { userId: girlOwnerId },
-            update: { username: displayName, avatarUrl, role: 'Girl Owner', order: i },
-            create: { userId: girlOwnerId, username: displayName, avatarUrl, role: 'Girl Owner', order: i },
+            update: { username: username, avatarUrl, role: 'Girl Owner', order: i },
+            create: { userId: girlOwnerId, username: username, avatarUrl, role: 'Girl Owner', order: i },
           });
           counters.synced++;
         }).catch((error) => {
@@ -126,18 +126,18 @@ export async function syncTeamMembers(client: Client) {
           const existing = existingMap.get(managerId);
           const avatarUrl = manager.user.displayAvatarURL({ size: 1024 });
           
-          // Use displayName (globalName) or fallback to username for consistent display
-          const displayName = manager.user.globalName || manager.user.username;
+          // Use username only (not display name)
+          const username = manager.user.username;
           
-          if (existing?.username === displayName && existing?.avatarUrl === avatarUrl) {
+          if (existing?.username === username && existing?.avatarUrl === avatarUrl) {
             counters.skipped++;
             return;
           }
 
           await prisma.teamMember.upsert({
             where: { userId: managerId },
-            update: { username: displayName, avatarUrl, role: 'Manager', order: i },
-            create: { userId: managerId, username: displayName, avatarUrl, role: 'Manager', order: i },
+            update: { username: username, avatarUrl, role: 'Manager', order: i },
+            create: { userId: managerId, username: username, avatarUrl, role: 'Manager', order: i },
           });
           counters.synced++;
         }).catch((error) => {
@@ -256,10 +256,10 @@ export function setupTeamSync(client: Client) {
       ...TEAM_CONFIG.MANAGER_IDS,
     ].includes(newMember.id) || hasRole;
     
-    // Detect username change - check both username and globalName (display name)
-    const oldDisplayName = oldMember.user.globalName || oldMember.user.username;
-    const newDisplayName = newMember.user.globalName || newMember.user.username;
-    const usernameChanged = oldDisplayName !== newDisplayName;
+    // Detect username change - use username only (not display name)
+    const oldUsername = oldMember.user.username;
+    const newUsername = newMember.user.username;
+    const usernameChanged = oldUsername !== newUsername;
     
     // Detect avatar change
     const oldAvatar = oldMember.user.displayAvatarURL({ size: 1024 });
@@ -269,9 +269,7 @@ export function setupTeamSync(client: Client) {
     // If Early Support role was added or removed, or profile changed for team member
     if (hadRole !== hasRole || (isTeamMember && (usernameChanged || avatarChanged))) {
       if (usernameChanged) {
-        const oldDisplayName = oldMember.user.globalName || oldMember.user.username;
-        const newDisplayName = newMember.user.globalName || newMember.user.username;
-        console.log(`[Team Sync] 👤 Username changed: ${oldDisplayName} → ${newDisplayName}, syncing...`);
+        console.log(`[Team Sync] 👤 Username changed: ${oldUsername} → ${newUsername}, syncing...`);
       }
       if (avatarChanged) {
         console.log(`[Team Sync] 🖼️  Avatar changed for ${newMember.user.username}, syncing...`);
@@ -305,17 +303,15 @@ export function setupTeamSync(client: Client) {
     
     if (!isTeamMember) return;
     
-    // Detect changes - check both username and globalName (display name)
-    const oldDisplayName = oldUser.globalName || oldUser.username;
-    const newDisplayName = newUser.globalName || newUser.username;
-    const usernameChanged = oldDisplayName !== newDisplayName;
+    // Detect changes - use username only (not display name)
+    const oldUsername = oldUser.username;
+    const newUsername = newUser.username;
+    const usernameChanged = oldUsername !== newUsername;
     const avatarChanged = oldUser.displayAvatarURL({ size: 1024 }) !== newUser.displayAvatarURL({ size: 1024 });
     
     if (usernameChanged || avatarChanged) {
       if (usernameChanged) {
-        const oldDisplayName = oldUser.globalName || oldUser.username;
-        const newDisplayName = newUser.globalName || newUser.username;
-        console.log(`[Team Sync] 👤 Core team username changed: ${oldDisplayName} → ${newDisplayName}`);
+        console.log(`[Team Sync] 👤 Core team username changed: ${oldUsername} → ${newUsername}`);
       }
       if (avatarChanged) {
         console.log(`[Team Sync] 🖼️  Core team avatar changed: ${newUser.username}`);

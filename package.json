@@ -11,7 +11,8 @@
     "prisma:migrate": "prisma migrate dev",
     "prisma:studio": "prisma studio",
     "flush-proofs": "ts-node flush-proofs.ts",
-    "insert-proofs": "ts-node insert-proofs-from-file.ts"
+    "insert-proofs": "ts-node insert-proofs-from-file.ts",
+    "update-usernames": "ts-node scripts/update-usernames.ts"
   },
   "keywords": ["discord", "bot", "vouches"],
   "author": "",

@@ -7,6 +7,7 @@ import { autoVouchCommand, autoVouchDisableCommand } from './commands/autoVouch'
 import { autoProofCommand, autoProofDisableCommand } from './commands/autoProof';
 import { deleteVouchCommand } from './commands/deleteVouch';
 import { deleteProofCommand } from './commands/deleteProof';
+import { removeProofCommand } from './commands/removeProof';
 import { setPrefixCommand } from './commands/setPrefix';
 import { storeUserCommand } from './commands/storeUser';
 import * as syncTeamCommand from './commands/syncTeam';
@@ -71,6 +72,7 @@ const commands = [
   autoProofDisableCommand.data.toJSON(),
   deleteVouchCommand.data.toJSON(),
   deleteProofCommand.data.toJSON(),
+  removeProofCommand.data.toJSON(),
   setPrefixCommand.data.toJSON(),
   storeUserCommand.data.toJSON(),
   syncTeamCommand.data.toJSON(),
@@ -141,6 +143,8 @@ client.on(Events.InteractionCreate, async (interaction) => {
       await deleteVouchCommand.execute(interaction);
     } else if (commandName === 'delete-proof') {
       await deleteProofCommand.execute(interaction);
+    } else if (commandName === 'remove-proof') {
+      await removeProofCommand.execute(interaction);
     } else if (commandName === 'setprefix') {
       await setPrefixCommand.execute(interaction);
     } else if (commandName === 'store-user') {
@@ -273,6 +277,12 @@ client.on(Events.MessageCreate, async (message: Message) => {
     
     // Check if channel is an auto-vouch channel (using cache)
     if (isAutoVouchChannel(message.channelId)) {
+      // Check if user is admin - skip processing for admins
+      if (message.member?.permissions.has('Administrator')) {
+        console.log(`⚠️ Admin message skipped in auto-vouch channel: ${message.id} from ${message.author.username}`);
+        return;
+      }
+      
       // Validate the vouch
       if (isValidVouch(message)) {
         try {
@@ -288,12 +298,12 @@ client.on(Events.MessageCreate, async (message: Message) => {
               data: {
                 message: message.content || '',
                 attachments: message.attachments.map(att => att.url),
-                authorName: message.author.globalName || message.author.username,
+                authorName: message.author.username,
                 authorAvatar: message.author.displayAvatarURL(),
                 updatedAt: new Date(),
               },
             });
-            console.log(`🔄 Auto-vouch updated: ${message.id} from ${message.author.globalName || message.author.username}`);
+            console.log(`🔄 Auto-vouch updated: ${message.id} from ${message.author.username}`);
           } else {
             // Create new vouch - each message ID is unique, one user can have multiple vouches
             let retries = 3;
@@ -322,7 +332,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
                     channelId: message.channelId,
                     channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
                     authorId: message.author.id,
-                    authorName: message.author.globalName || message.author.username,
+                    authorName: message.author.username,
                     authorAvatar: message.author.displayAvatarURL(),
                     vouchedUserId: vouchedUserId, // Store the vouched user ID
                     message: message.content || '',
@@ -343,7 +353,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
                   }
                 }, 3000);
                 
-                console.log(`✅ Auto-vouch saved: ${message.id} from ${message.author.globalName || message.author.username}`);
+                console.log(`✅ Auto-vouch saved: ${message.id} from ${message.author.username}`);
               } catch (createError: any) {
                 if (createError.code === 'P2002') {
                   // Unique constraint violation - check if it's messageId or vouchNumber
@@ -447,12 +457,12 @@ client.on(Events.MessageCreate, async (message: Message) => {
               data: {
                 message: message.content || '',
                 imageUrls: imageUrls,
-                authorName: message.author.globalName || message.author.username,
+                authorName: message.author.username,
                 authorAvatar: message.author.displayAvatarURL(),
                 updatedAt: new Date(),
               },
             });
-            console.log(`🔄 Auto-proof updated: ${message.id} from ${message.author.globalName || message.author.username} (${imageUrls.length} images)`);
+            console.log(`🔄 Auto-proof updated: ${message.id} from ${message.author.username} (${imageUrls.length} images)`);
           } else {
             // Create new proof
             await prisma.proof.create({
@@ -460,7 +470,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
                 channelId: message.channelId,
                 channelName: message.channel.isDMBased() ? 'DM' : (message.channel as any).name,
                 authorId: message.author.id,
-                authorName: message.author.globalName || message.author.username,
+                authorName: message.author.username,
                 authorAvatar: message.author.displayAvatarURL(),
                 message: message.content || '',
                 messageId: message.id,
@@ -469,7 +479,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
               },
             });
             
-            console.log(`✅ Auto-proof saved: ${message.id} from ${message.author.globalName || message.author.username} (${imageUrls.length} images)`);
+            console.log(`✅ Auto-proof saved: ${message.id} from ${message.author.username} (${imageUrls.length} images)`);
           }
         } catch (error: any) {
           // Handle any unexpected errors
