@@ -55,11 +55,11 @@ export const removeProofCommand = {
         .setTitle('🗑️ Proof Removed')
         .setDescription(`Successfully removed proof from database`)
         .addFields(
-          { name: '📝 Message ID', value: messageId, inline: true },
-          { name: '👤 Author', value: proof.authorName, inline: true },
-          { name: '📅 Date', value: proof.timestamp.toLocaleDateString(), inline: true },
-          { name: '🖼️ Images', value: `${proof.imageUrls.length} image(s)`, inline: true },
-          { name: '💬 Message', value: proof.message.substring(0, 100) + (proof.message.length > 100 ? '...' : ''), inline: false }
+          { name: ' Message ID', value: messageId, inline: true },
+          { name: ' Author', value: proof.authorName, inline: true },
+          { name: ' Date', value: proof.timestamp.toLocaleDateString(), inline: true },
+          { name: ' Images', value: `${proof.imageUrls.length} image(s)`, inline: true },
+          { name: ' Message', value: proof.message.substring(0, 100) + (proof.message.length > 100 ? '...' : ''), inline: false }
         )
         .setFooter({ text: `Removed by ${interaction.user.tag}` })
         .setTimestamp();
