@@ -33,59 +33,53 @@ export const deleteProofCommand = {
     await interaction.deferReply({ ephemeral: true });
 
     try {
-      // Find the proof in database
-      const proof = await prisma.proof.findUnique({
+      // Look up message ID in Vouch table
+      const vouch = await prisma.vouch.findUnique({
         where: { messageId: messageId },
       });
 
-      if (!proof) {
+      if (!vouch) {
         await interaction.editReply({
-          content: `❌ No proof found with message ID: \`${messageId}\``,
+          content: `❌ No vouch found with message ID: \`${messageId}\``,
         });
         return;
       }
 
-      // Try to delete the Discord message
-      let messageDeleted = false;
-      try {
-        const channel = await interaction.client.channels.fetch(proof.channelId);
-        if (channel?.isTextBased()) {
-          const message = await channel.messages.fetch(messageId);
-          await message.delete();
-          messageDeleted = true;
-        }
-      } catch (error) {
-        console.log(`⚠️ Could not delete Discord message ${messageId}:`, error);
-        // Continue anyway - we'll still delete from database
+      if (!vouch.proofUrl) {
+        await interaction.editReply({
+          content: `❌ Vouch with message ID \`${messageId}\` has no proof URL to delete.`,
+        });
+        return;
       }
 
-      // Delete from database
-      await prisma.proof.delete({
+      // Update the vouch to remove the proof URL
+      await prisma.vouch.update({
         where: { messageId: messageId },
+        data: { proofUrl: null },
       });
 
       const embed = new EmbedBuilder()
         .setColor(0xff0000)
-        .setTitle('🗑️ Proof Deleted')
-        .setDescription(`Successfully deleted proof from ${proof.authorName}`)
+        .setTitle('🗑️ Proof URL Deleted')
+        .setDescription(`Successfully removed proof URL from vouch`)
         .addFields(
           { name: '📝 Message ID', value: messageId, inline: true },
-          { name: '👤 Author', value: proof.authorName, inline: true },
-          { name: '📅 Original Date', value: proof.timestamp.toLocaleDateString(), inline: true },
-          { name: '🖼️ Images', value: `${proof.imageUrls.length} image(s)`, inline: true },
-          { name: '💬 Message Preview', value: proof.message.substring(0, 100) + (proof.message.length > 100 ? '...' : ''), inline: false },
-          { name: '🔄 Status', value: `Database: ✅ Deleted\nDiscord: ${messageDeleted ? '✅ Deleted' : '⚠️ Not found/already deleted'}`, inline: false }
+          { name: '👤 Author', value: vouch.authorName, inline: true },
+          { name: '📅 Original Date', value: vouch.timestamp.toLocaleDateString(), inline: true },
+          { name: '#️⃣ Vouch Number', value: `#${vouch.vouchNumber}`, inline: true },
+          { name: '💬 Message Preview', value: vouch.message.substring(0, 100) + (vouch.message.length > 100 ? '...' : ''), inline: false },
+          { name: '🔗 Removed Proof URL', value: vouch.proofUrl, inline: false }
         )
         .setFooter({ text: `Deleted by ${interaction.user.tag}` })
         .setTimestamp();
 
       await interaction.editReply({ embeds: [embed] });
       
-      console.log(`🗑️ Proof deleted: ${messageId} by ${interaction.user.tag}`);
+      console.log(`🗑️ Proof URL deleted from vouch: ${messageId} by ${interaction.user.tag}`);
     } catch (error) {
-      console.error('Error deleting proof:', error);
+      console.error('Error deleting proof URL:', error);
       await interaction.editReply({
-        content: '❌ An error occurred while deleting the proof. Please try again.',
+        content: '❌ An error occurred while deleting the proof URL. Please try again.',
       });
     }
   },
