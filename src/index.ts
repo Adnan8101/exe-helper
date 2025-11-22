@@ -229,15 +229,24 @@ client.on(Events.MessageCreate, async (message: Message) => {
       
       if (['stick', 'stickstop', 'stickstart', 'stickremove', 'getstickies'].includes(commandName)) {
         await handleStickyPrefixCommand(message, guildPrefix);
-        return;
+        return; // Don't repost sticky for sticky command messages
       }
       
       if (commandName === 'prefix') {
         await handlePrefixCommand(message, guildPrefix);
-        return;
+        return; // Don't repost sticky for prefix command messages
       }
     }
     
+    // Handle sticky message reposting FIRST for all non-command messages
+    // This ensures sticky is reposted even if there are errors or early returns below
+    try {
+      await handleStickyRepost(message);
+    } catch (stickyError) {
+      console.error('❌ Error in sticky repost:', stickyError);
+    }
+    
+    // Now continue with other message processing
     // Check if message is a reply with delete command
     if (message.reference?.messageId) {
       const content = message.content.trim();
@@ -543,9 +552,6 @@ client.on(Events.MessageCreate, async (message: Message) => {
       }
       // If no images, just ignore the message
     }
-    
-    // Handle sticky message reposting
-    await handleStickyRepost(message);
   } catch (error) {
     console.error('❌ Error processing message:', error);
   }
