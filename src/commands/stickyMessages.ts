@@ -562,6 +562,9 @@ export async function handleStickyPrefixCommand(message: Message, prefix: string
 
 // Handler for auto-reposting sticky messages
 export async function handleStickyRepost(message: Message) {
+  // Don't repost for bot messages (we only want to repost when real users send messages)
+  if (message.author.bot) return;
+  
   const channelId = message.channelId;
   
   try {
@@ -573,19 +576,18 @@ export async function handleStickyRepost(message: Message) {
 
     // Don't repost if this message IS the sticky message itself (prevent infinite loop)
     if (sticky.lastMessageId && message.id === sticky.lastMessageId) return;
-    
-    // Don't repost for bot messages (we only want to repost when real users send messages)
-    if (message.author.bot) return;
 
     const channel = message.channel as TextChannel;
 
-    // Delete the old sticky message if it exists
+    // Delete the old sticky message if it exists and can be found
     if (sticky.lastMessageId) {
       try {
         const oldMsg = await channel.messages.fetch(sticky.lastMessageId);
         await oldMsg.delete();
+        console.log(`🗑️ Deleted old sticky message ${sticky.lastMessageId}`);
       } catch (error) {
-        console.log('Could not delete old sticky message (might be already deleted)');
+        // If message is already deleted or not found, that's fine - continue with repost
+        console.log(`⚠️ Could not delete old sticky message ${sticky.lastMessageId} (might be already deleted)`);
       }
     }
 
@@ -595,11 +597,40 @@ export async function handleStickyRepost(message: Message) {
     // Update database with new message ID
     await prisma.stickyMessage.update({
       where: { channelId },
-      data: { lastMessageId: newStickyMsg.id },
+      data: { 
+        lastMessageId: newStickyMsg.id,
+        updatedAt: new Date(),
+      },
     });
     
-    console.log(`📌 Sticky message reposted in ${channel.name}`);
+    console.log(`📌 Sticky message reposted in ${channel.name} (new ID: ${newStickyMsg.id})`);
   } catch (error) {
-    console.error('Error reposting sticky message:', error);
+    console.error('❌ Error reposting sticky message:', error);
+    
+    // If there's an error with the sticky message, try to recover
+    // This handles the case where the sticky was deleted manually
+    try {
+      const sticky = await prisma.stickyMessage.findUnique({
+        where: { channelId },
+      });
+      
+      if (sticky && sticky.isActive) {
+        // Try to repost even if the old one couldn't be deleted
+        const channel = message.channel as TextChannel;
+        const newStickyMsg = await channel.send(sticky.message);
+        
+        await prisma.stickyMessage.update({
+          where: { channelId },
+          data: { 
+            lastMessageId: newStickyMsg.id,
+            updatedAt: new Date(),
+          },
+        });
+        
+        console.log(`📌 Sticky message recovered and reposted in ${channel.name}`);
+      }
+    } catch (recoveryError) {
+      console.error('❌ Failed to recover sticky message:', recoveryError);
+    }
   }
 }
