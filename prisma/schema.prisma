@@ -128,3 +128,32 @@ model TeamMember {
   @@index([role])
   @@index([order])
 }
+
+model StickyMessage {
+  id              String   @id @default(cuid())
+  guildId         String
+  channelId       String   @unique
+  channelName     String
+  message         String   @db.Text
+  lastMessageId   String?  // ID of the last posted sticky message
+  isActive        Boolean  @default(true) // true = active, false = stopped
+  createdBy       String   // User ID who created the sticky
+  createdByName   String
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+  
+  @@index([guildId])
+  @@index([channelId])
+  @@index([isActive])
+}
+
+model GuildPrefix {
+  id        String   @id @default(cuid())
+  guildId   String   @unique
+  prefix    String   @default("?")
+  updatedBy String   // User ID who last updated
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  @@index([guildId])
+}

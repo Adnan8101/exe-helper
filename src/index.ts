@@ -8,9 +8,18 @@ import { autoProofCommand, autoProofDisableCommand } from './commands/autoProof'
 import { deleteVouchCommand } from './commands/deleteVouch';
 import { deleteProofCommand } from './commands/deleteProof';
 import { removeProofCommand } from './commands/removeProof';
-import { setPrefixCommand } from './commands/setPrefix';
+import { setPrefixCommand, handlePrefixCommand, getGuildPrefix } from './commands/setPrefix';
 import { storeUserCommand } from './commands/storeUser';
 import * as syncTeamCommand from './commands/syncTeam';
+import { 
+  stickCommand, 
+  stickStopCommand, 
+  stickStartCommand, 
+  stickRemoveCommand, 
+  getStickiesCommand,
+  handleStickyPrefixCommand,
+  handleStickyRepost
+} from './commands/stickyMessages';
 import { connectDatabase, prisma } from './database';
 import { isValidVouch, extractImageUrls } from './utils/vouchValidator';
 import { 
@@ -76,6 +85,11 @@ const commands = [
   setPrefixCommand.data.toJSON(),
   storeUserCommand.data.toJSON(),
   syncTeamCommand.data.toJSON(),
+  stickCommand.data.toJSON(),
+  stickStopCommand.data.toJSON(),
+  stickStartCommand.data.toJSON(),
+  stickRemoveCommand.data.toJSON(),
+  getStickiesCommand.data.toJSON(),
 ];
 
 // Register slash commands
@@ -145,12 +159,22 @@ client.on(Events.InteractionCreate, async (interaction) => {
       await deleteProofCommand.execute(interaction);
     } else if (commandName === 'remove-proof') {
       await removeProofCommand.execute(interaction);
-    } else if (commandName === 'setprefix') {
+    } else if (commandName === 'prefix') {
       await setPrefixCommand.execute(interaction);
     } else if (commandName === 'store-user') {
       await storeUserCommand.execute(interaction);
     } else if (commandName === 'synctream') {
       await syncTeamCommand.execute(interaction);
+    } else if (commandName === 'stick') {
+      await stickCommand.execute(interaction);
+    } else if (commandName === 'stickstop') {
+      await stickStopCommand.execute(interaction);
+    } else if (commandName === 'stickstart') {
+      await stickStartCommand.execute(interaction);
+    } else if (commandName === 'stickremove') {
+      await stickRemoveCommand.execute(interaction);
+    } else if (commandName === 'getstickies') {
+      await getStickiesCommand.execute(interaction);
     }
   }
   
@@ -196,13 +220,30 @@ client.on(Events.MessageCreate, async (message: Message) => {
     // Refresh cache periodically
     await refreshCacheIfNeeded();
     
+    // Get guild-specific prefix
+    const guildPrefix = await getGuildPrefix(message.guildId!);
+    
+    // Handle prefix commands for sticky messages
+    if (message.content.startsWith(guildPrefix)) {
+      const commandName = message.content.slice(guildPrefix.length).trim().split(/\s+/)[0].toLowerCase();
+      
+      if (['stick', 'stickstop', 'stickstart', 'stickremove', 'getstickies'].includes(commandName)) {
+        await handleStickyPrefixCommand(message, guildPrefix);
+        return;
+      }
+      
+      if (commandName === 'prefix') {
+        await handlePrefixCommand(message, guildPrefix);
+        return;
+      }
+    }
+    
     // Check if message is a reply with delete command
     if (message.reference?.messageId) {
       const content = message.content.trim();
-      const prefix = getBotPrefix();
       
       // Check for delete command with configured prefix
-      if (content === `${prefix}delete`) {
+      if (content === `${guildPrefix}delete`) {
         const referencedMessageId = message.reference.messageId;
         
         // Check if it's a vouch
@@ -277,13 +318,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
     
     // Check if channel is an auto-vouch channel (using cache)
     if (isAutoVouchChannel(message.channelId)) {
-      // Check if user is admin - skip processing for admins
-      if (message.member?.permissions.has('Administrator')) {
-        console.log(`⚠️ Admin message skipped in auto-vouch channel: ${message.id} from ${message.author.username}`);
-        return;
-      }
-      
-      // Validate the vouch
+      // Validate the vouch first
       if (isValidVouch(message)) {
         try {
           // Check if vouch with this messageId already exists
@@ -343,6 +378,13 @@ client.on(Events.MessageCreate, async (message: Message) => {
                 });
                 created = true;
                 
+                // Add reaction emoji to the vouch message
+                try {
+                  await message.react('<:exe_tick:1441791413984432253>');
+                } catch (error) {
+                  console.log('⚠️ Could not add reaction emoji');
+                }
+                
                 // Send success message and delete after 3 seconds
                 const successMsg = await message.reply('✅ Vouch added successfully!');
                 setTimeout(async () => {
@@ -384,7 +426,16 @@ client.on(Events.MessageCreate, async (message: Message) => {
           console.error('❌ Error processing vouch:', error.message);
         }
       } else {
-        // Invalid vouch - delete and send warning
+        // Invalid vouch - only delete and warn if NOT from admin
+        const isAdmin = message.member?.permissions.has('Administrator');
+        
+        if (isAdmin) {
+          // Ignore non-vouch messages from admins (let them chat)
+          console.log(`⚠️ Admin non-vouch message ignored in auto-vouch channel: ${message.id} from ${message.author.username}`);
+          return;
+        }
+        
+        // For non-admin invalid vouches - delete and send warning
         try {
           await message.delete();
           if (message.channel.isTextBased() && 'send' in message.channel) {
@@ -492,6 +543,9 @@ client.on(Events.MessageCreate, async (message: Message) => {
       }
       // If no images, just ignore the message
     }
+    
+    // Handle sticky message reposting
+    await handleStickyRepost(message);
   } catch (error) {
     console.error('❌ Error processing message:', error);
   }
