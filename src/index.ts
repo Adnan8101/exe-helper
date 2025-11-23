@@ -18,7 +18,8 @@ import {
   stickRemoveCommand, 
   getStickiesCommand,
   handleStickyPrefixCommand,
-  handleStickyRepost
+  handleStickyRepost,
+  handleStickyMessageModal
 } from './commands/stickyMessages';
 import { connectDatabase, prisma } from './database';
 import { isValidVouch, extractImageUrls } from './utils/vouchValidator';
@@ -204,6 +205,17 @@ client.on(Events.InteractionCreate, async (interaction) => {
     // Handle team stats update button
     if (customId === 'update_team_stats') {
       await syncTeamCommand.handleButtonInteraction(interaction);
+    }
+  }
+  
+  // Handle modal submissions
+  if (interaction.isModalSubmit()) {
+    const { customId } = interaction;
+    console.log(`📝 Modal submitted: ${customId} by ${interaction.user.tag}`);
+    
+    // Handle sticky message modal
+    if (customId.startsWith('sticky_setup_modal_') || customId.startsWith('sticky_edit_modal_')) {
+      await handleStickyMessageModal(interaction);
     }
   }
 });
@@ -395,7 +407,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
                 }
                 
                 // Send success message and delete after 3 seconds
-                const successMsg = await message.reply('✅ Vouch added successfully!');
+                const successMsg = await message.reply('Thank You For Vouching! <a:Heart:1442051848109297706>');
                 setTimeout(async () => {
                   try {
                     await successMsg.delete();

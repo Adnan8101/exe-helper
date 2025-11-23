@@ -135,6 +135,7 @@ model StickyMessage {
   channelId       String   @unique
   channelName     String
   message         String   @db.Text
+  webhookUrl      String?  // Webhook URL for sending sticky messages
   lastMessageId   String?  // ID of the last posted sticky message
   isActive        Boolean  @default(true) // true = active, false = stopped
   createdBy       String   // User ID who created the sticky

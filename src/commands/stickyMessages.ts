@@ -6,6 +6,11 @@ import {
   TextChannel,
   EmbedBuilder,
   Message,
+  ModalBuilder,
+  TextInputBuilder,
+  TextInputStyle,
+  ActionRowBuilder,
+  ModalSubmitInteraction,
 } from 'discord.js';
 import { prisma } from '../database';
 
@@ -13,11 +18,12 @@ import { prisma } from '../database';
 export const stickCommand = {
   data: new SlashCommandBuilder()
     .setName('stick')
-    .setDescription('Stick a message to this channel (Admin only)')
-    .addStringOption(option =>
+    .setDescription('Stick a message to a channel (Admin only)')
+    .addChannelOption(option =>
       option
-        .setName('message')
-        .setDescription('The message to stick')
+        .setName('channel')
+        .setDescription('The channel to stick the message in')
+        .addChannelTypes(ChannelType.GuildText)
         .setRequired(true)
     )
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
@@ -31,9 +37,8 @@ export const stickCommand = {
       return;
     }
 
-    const message = interaction.options.getString('message', true);
-    const channelId = interaction.channelId;
-    const channel = interaction.channel as TextChannel;
+    const channel = interaction.options.getChannel('channel', true) as TextChannel;
+    const channelId = channel.id;
 
     try {
       // Check if sticky already exists in this channel
@@ -43,41 +48,51 @@ export const stickCommand = {
 
       if (existing) {
         await interaction.reply({
-          content: `A sticky message already exists in this channel. Use /stickremove first to create a new one.`,
+          content: `A sticky message already exists in <#${channelId}>. Use /stickremove first to create a new one.`,
           ephemeral: true,
         });
         return;
       }
 
-      // Post the sticky message
-      const stickyMsg = await channel.send(message);
-
-      // Save to database
+      // Create placeholder in database
       await prisma.stickyMessage.create({
         data: {
           guildId: interaction.guildId!,
           channelId: channelId,
           channelName: channel.name,
-          message: message,
-          lastMessageId: stickyMsg.id,
-          isActive: true,
+          message: '',
+          isActive: false,
           createdBy: interaction.user.id,
           createdByName: interaction.user.username,
         },
       });
 
-      await interaction.reply({
-        content: `Sticky message created successfully in ${channel}`,
-        ephemeral: true,
-      });
+      // Show modal for message input
+      const modal = new ModalBuilder()
+        .setCustomId(`sticky_setup_modal_${channelId}`)
+        .setTitle('Set Sticky Message');
 
-      console.log(`Sticky message created in ${channel.name} by ${interaction.user.username}`);
+      const messageInput = new TextInputBuilder()
+        .setCustomId('sticky_message_input')
+        .setLabel('Enter your sticky message')
+        .setStyle(TextInputStyle.Paragraph)
+        .setPlaceholder('Type your message here...\n\nLine breaks and spacing will be preserved.')
+        .setRequired(true)
+        .setMaxLength(2000);
+
+      const actionRow = new ActionRowBuilder<TextInputBuilder>().addComponents(messageInput);
+      modal.addComponents(actionRow);
+
+      await interaction.showModal(modal);
     } catch (error) {
-      console.error('Error creating sticky message:', error);
-      await interaction.reply({
-        content: 'An error occurred while creating the sticky message.',
-        ephemeral: true,
-      });
+      console.error('Error creating sticky:', error);
+      
+      if (!interaction.replied && !interaction.deferred) {
+        await interaction.reply({
+          content: 'An error occurred while setting up the sticky message.',
+          ephemeral: true,
+        });
+      }
     }
   },
 };
@@ -86,7 +101,14 @@ export const stickCommand = {
 export const stickStopCommand = {
   data: new SlashCommandBuilder()
     .setName('stickstop')
-    .setDescription('Stop the sticky message in this channel (Admin only)')
+    .setDescription('Stop the sticky message in a channel (Admin only)')
+    .addChannelOption(option =>
+      option
+        .setName('channel')
+        .setDescription('The channel to stop sticky in')
+        .addChannelTypes(ChannelType.GuildText)
+        .setRequired(true)
+    )
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
   async execute(interaction: ChatInputCommandInteraction) {
@@ -98,7 +120,8 @@ export const stickStopCommand = {
       return;
     }
 
-    const channelId = interaction.channelId;
+    const channel = interaction.options.getChannel('channel', true) as TextChannel;
+    const channelId = channel.id;
 
     try {
       const sticky = await prisma.stickyMessage.findUnique({
@@ -107,7 +130,7 @@ export const stickStopCommand = {
 
       if (!sticky) {
         await interaction.reply({
-          content: 'There is no sticky message in this channel.',
+          content: 'There is no sticky message in that channel.',
           ephemeral: true,
         });
         return;
@@ -148,6 +171,13 @@ export const stickStartCommand = {
   data: new SlashCommandBuilder()
     .setName('stickstart')
     .setDescription('Restart a stopped sticky message (Admin only)')
+    .addChannelOption(option =>
+      option
+        .setName('channel')
+        .setDescription('The channel to restart sticky in')
+        .addChannelTypes(ChannelType.GuildText)
+        .setRequired(true)
+    )
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
   async execute(interaction: ChatInputCommandInteraction) {
@@ -159,8 +189,8 @@ export const stickStartCommand = {
       return;
     }
 
-    const channelId = interaction.channelId;
-    const channel = interaction.channel as TextChannel;
+    const channel = interaction.options.getChannel('channel', true) as TextChannel;
+    const channelId = channel.id;
 
     try {
       const sticky = await prisma.stickyMessage.findUnique({
@@ -169,7 +199,7 @@ export const stickStartCommand = {
 
       if (!sticky) {
         await interaction.reply({
-          content: 'There is no sticky message in this channel.',
+          content: 'There is no sticky message in that channel.',
           ephemeral: true,
         });
         return;
@@ -215,7 +245,14 @@ export const stickStartCommand = {
 export const stickRemoveCommand = {
   data: new SlashCommandBuilder()
     .setName('stickremove')
-    .setDescription('Remove the sticky message from this channel (Admin only)')
+    .setDescription('Remove the sticky message from a channel (Admin only)')
+    .addChannelOption(option =>
+      option
+        .setName('channel')
+        .setDescription('The channel to remove sticky from')
+        .addChannelTypes(ChannelType.GuildText)
+        .setRequired(true)
+    )
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
   async execute(interaction: ChatInputCommandInteraction) {
@@ -227,8 +264,8 @@ export const stickRemoveCommand = {
       return;
     }
 
-    const channelId = interaction.channelId;
-    const channel = interaction.channel as TextChannel;
+    const channel = interaction.options.getChannel('channel', true) as TextChannel;
+    const channelId = channel.id;
 
     try {
       const sticky = await prisma.stickyMessage.findUnique({
@@ -237,7 +274,7 @@ export const stickRemoveCommand = {
 
       if (!sticky) {
         await interaction.reply({
-          content: 'There is no sticky message in this channel.',
+          content: 'There is no sticky message in that channel.',
           ephemeral: true,
         });
         return;
@@ -353,6 +390,86 @@ export const getStickiesCommand = {
     }
   },
 };
+
+// Handler for sticky message modal submission
+export async function handleStickyMessageModal(interaction: ModalSubmitInteraction) {
+  const channelId = interaction.customId.replace('sticky_setup_modal_', '').replace('sticky_edit_modal_', '');
+  const message = interaction.fields.getTextInputValue('sticky_message_input');
+
+  try {
+    // Get the sticky message record
+    const sticky = await prisma.stickyMessage.findUnique({
+      where: { channelId },
+    });
+
+    if (!sticky) {
+      await interaction.reply({
+        content: '❌ Sticky message configuration not found. Please run /stick again.',
+        ephemeral: true,
+      });
+      return;
+    }
+
+    // Get the channel
+    const channel = await interaction.client.channels.fetch(channelId) as TextChannel;
+    
+    if (!channel) {
+      await interaction.reply({
+        content: '❌ Channel not found.',
+        ephemeral: true,
+      });
+      return;
+    }
+
+    // Delete old message if exists
+    if (sticky.lastMessageId) {
+      try {
+        const oldMsg = await channel.messages.fetch(sticky.lastMessageId);
+        await oldMsg.delete();
+        console.log(`🗑️ Deleted old sticky message ${sticky.lastMessageId}`);
+      } catch (error) {
+        console.log('⚠️ Could not delete old sticky message');
+      }
+    }
+
+    // Send new sticky message
+    const stickyMsg = await channel.send(message);
+
+    // Update the sticky message in database
+    await prisma.stickyMessage.update({
+      where: { channelId },
+      data: {
+        message: message,
+        lastMessageId: stickyMsg.id,
+        isActive: true,
+        updatedAt: new Date(),
+      },
+    });
+
+    const successEmbed = new EmbedBuilder()
+      .setTitle('✅ Sticky Message Created')
+      .setDescription(`Your sticky message has been set up successfully in <#${channelId}>!`)
+      .addFields({
+        name: 'Message Preview',
+        value: message.length > 100 ? message.substring(0, 100) + '...' : message,
+      })
+      .setColor(0x00FF00)
+      .setTimestamp();
+
+    await interaction.reply({
+      embeds: [successEmbed],
+      ephemeral: true,
+    });
+
+    console.log(`✅ Sticky message created in ${channelId} by ${interaction.user.username}`);
+  } catch (error) {
+    console.error('Error in sticky message modal handler:', error);
+    await interaction.reply({
+      content: '❌ An error occurred while processing your message.',
+      ephemeral: true,
+    }).catch(() => {});
+  }
+}
 
 // Prefix command handler
 export async function handleStickyPrefixCommand(message: Message, prefix: string) {
@@ -579,21 +696,20 @@ export async function handleStickyRepost(message: Message) {
 
     const channel = message.channel as TextChannel;
 
-    // Delete the old sticky message if it exists and can be found
+    // Delete old sticky message
     if (sticky.lastMessageId) {
       try {
         const oldMsg = await channel.messages.fetch(sticky.lastMessageId);
         await oldMsg.delete();
         console.log(`🗑️ Deleted old sticky message ${sticky.lastMessageId}`);
       } catch (error) {
-        // If message is already deleted or not found, that's fine - continue with repost
-        console.log(`⚠️ Could not delete old sticky message ${sticky.lastMessageId} (might be already deleted)`);
+        console.log(`⚠️ Could not delete old sticky message ${sticky.lastMessageId}`);
       }
     }
 
     // Post new sticky message
     const newStickyMsg = await channel.send(sticky.message);
-
+    
     // Update database with new message ID
     await prisma.stickyMessage.update({
       where: { channelId },
@@ -607,15 +723,13 @@ export async function handleStickyRepost(message: Message) {
   } catch (error) {
     console.error('❌ Error reposting sticky message:', error);
     
-    // If there's an error with the sticky message, try to recover
-    // This handles the case where the sticky was deleted manually
+    // Try to recover
     try {
       const sticky = await prisma.stickyMessage.findUnique({
         where: { channelId },
       });
       
       if (sticky && sticky.isActive) {
-        // Try to repost even if the old one couldn't be deleted
         const channel = message.channel as TextChannel;
         const newStickyMsg = await channel.send(sticky.message);
         

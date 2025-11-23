@@ -14,12 +14,17 @@
     "insert-proofs": "ts-node insert-proofs-from-file.ts",
     "update-usernames": "ts-node scripts/update-usernames.ts"
   },
-  "keywords": ["discord", "bot", "vouches"],
+  "keywords": [
+    "discord",
+    "bot",
+    "vouches"
+  ],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
     "@prisma/client": "^6.19.0",
+    "axios": "^1.13.2",
     "discord.js": "^14.24.2",
     "dotenv": "^17.2.3"
   },
