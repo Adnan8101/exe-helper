@@ -654,46 +654,48 @@ client.on(Events.MessageUpdate, async (oldMessage: Message | PartialMessage, new
 
 // Message delete event listener
 client.on(Events.MessageDelete, async (message: Message | PartialMessage) => {
-  // Fetch full message if partial
-  if (message.partial) {
-    try {
-      await message.fetch();
-    } catch (error) {
-      console.log('⚠️ Could not fetch deleted message');
-      // Continue with partial message
-    }
-  }
-  
   try {
-    // Check if it's a vouch
+    // Try to get the message ID - it should always be available even for partial messages
+    const messageId = message.id;
+    
+    if (!messageId) {
+      console.log('⚠️ No message ID available for deleted message');
+      return;
+    }
+    
+    console.log(`🔍 Message deleted: ${messageId}`);
+    
+    // Check if it's a vouch in database
     const vouch = await prisma.vouch.findUnique({
-      where: { messageId: message.id },
+      where: { messageId: messageId },
     });
     
     if (vouch) {
       // Delete from database
       await prisma.vouch.delete({
-        where: { messageId: message.id },
+        where: { messageId: messageId },
       });
       
-      console.log(`🗑️ Vouch deleted from database (message deleted by user): ${message.id}`);
+      console.log(`🗑️ Vouch #${vouch.vouchNumber} deleted from database: ${messageId}`);
       return;
     }
     
-    // Check if it's a proof
+    // Check if it's a proof in database
     const proof = await prisma.proof.findUnique({
-      where: { messageId: message.id },
+      where: { messageId: messageId },
     });
     
     if (proof) {
       // Delete from database
       await prisma.proof.delete({
-        where: { messageId: message.id },
+        where: { messageId: messageId },
       });
       
-      console.log(`🗑️ Proof deleted from database (message deleted by user): ${message.id}`);
+      console.log(`🗑️ Proof deleted from database: ${messageId}`);
       return;
     }
+    
+    console.log(`ℹ️ Deleted message ${messageId} was not a vouch or proof`);
   } catch (error) {
     console.error('❌ Error processing message deletion:', error);
   }
