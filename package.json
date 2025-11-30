@@ -12,7 +12,8 @@
     "prisma:studio": "prisma studio",
     "flush-proofs": "ts-node flush-proofs.ts",
     "insert-proofs": "ts-node insert-proofs-from-file.ts",
-    "update-usernames": "ts-node scripts/update-usernames.ts"
+    "update-usernames": "ts-node scripts/update-usernames.ts",
+    "test:db": "tsx scripts/test-db-connection.ts"
   },
   "keywords": [
     "discord",

@@ -97,8 +97,14 @@ export const captureDataCommand = {
       // Sort messages by timestamp (oldest first)
       allMessages.sort((a, b) => a.createdTimestamp - b.createdTimestamp);
 
+      // Filter messages that contain "legit" or "vouch" (case-insensitive)
+      const filteredMessages = allMessages.filter((msg) => {
+        const content = msg.content.toLowerCase();
+        return content.includes('legit') || content.includes('vouch');
+      });
+
       // Process and structure the data
-      const capturedData: CapturedData[] = allMessages.map((msg) => ({
+      const capturedData: CapturedData[] = filteredMessages.map((msg) => ({
         authorId: msg.author.id,
         authorName: msg.author.tag,
         authorAvatar: msg.author.displayAvatarURL(),
@@ -155,9 +161,10 @@ export const captureDataCommand = {
       const summaryEmbed = new EmbedBuilder()
         .setColor(0x00ff00)
         .setTitle('📊 Data Collection Summary')
-        .setDescription(`Successfully captured data from ${channel}`)
+        .setDescription(`Successfully captured vouches from ${channel}\n*Only messages containing "legit" or "vouch" were captured*`)
         .addFields(
-          { name: '📝 Total Messages', value: capturedData.length.toString(), inline: true },
+          { name: '📝 Total Vouches Found', value: capturedData.length.toString(), inline: true },
+          { name: '📨 Total Messages Scanned', value: allMessages.length.toString(), inline: true },
           { name: '👥 Unique Authors', value: uniqueAuthors.toString(), inline: true },
           { name: '📎 Messages with Attachments', value: messagesWithAttachments.toString(), inline: true },
           { name: '🏆 Top Contributors', value: topAuthors || 'None', inline: false },
