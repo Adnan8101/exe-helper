@@ -13,7 +13,9 @@
     "flush-proofs": "ts-node flush-proofs.ts",
     "insert-proofs": "ts-node insert-proofs-from-file.ts",
     "update-usernames": "ts-node scripts/update-usernames.ts",
-    "test:db": "tsx scripts/test-db-connection.ts"
+    "test:db": "tsx scripts/test-db-connection.ts",
+    "test:e2e": "tsx scripts/test-end-to-end.ts",
+    "test:sync": "tsx scripts/test-db-sync.ts"
   },
   "keywords": [
     "discord",

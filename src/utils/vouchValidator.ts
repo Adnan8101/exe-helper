@@ -1,9 +1,16 @@
 import { Message } from 'discord.js';
 
-// User IDs to check for mentions
-const REQUIRED_USER_IDS = [
-  '643480211421265930', // @rex.f
-  '959653911923396629', // @imunknown69
+// Positive keywords to check (case insensitive)
+const POSITIVE_KEYWORDS = [
+  'legit',
+  'vouch',
+  'trusted',
+  'rep',
+  '+rep',
+  'ref',
+  'thanks',
+  'tysm',
+  'ty',
 ];
 
 // Value keywords to check (case insensitive)
@@ -22,29 +29,45 @@ const VALUE_KEYWORDS = [
   'rupee',
   'eth',
   'usdt',
+  'upi',
+  'paytm',
+  'gpay',
+  'phonepe',
+  'robux',
+  'credits',
+  'sol',
+  'xrp',
+  'binance',
+  'cash',
+  'money',
+  'amount',
+  'deal',
+  'trade',
+  'exchange',
+  'swap',
+  'sell',
+  'buy',
 ];
 
 /**
  * Validates if a message is a valid vouch
  * Requirements:
- * 1. Must contain the word "legit" (case insensitive)
- * 2. Must mention either @rex.f or @imunknown69
+ * 1. Must contain a positive keyword (legit, vouch, etc.)
+ * 2. Must mention someone (the person being vouched for)
  * 3. Must contain some value/currency keyword
  */
 export function isValidVouch(message: Message): boolean {
   const content = message.content.toLowerCase();
   
-  // Check 1: Must contain "legit"
-  if (!content.includes('legit')) {
+  // Check 1: Must contain a positive keyword
+  const hasPositiveKeyword = POSITIVE_KEYWORDS.some(keyword => content.includes(keyword));
+  if (!hasPositiveKeyword) {
     return false;
   }
   
-  // Check 2: Must mention one of the required users
-  const hasMention = message.mentions.users.some(user => 
-    REQUIRED_USER_IDS.includes(user.id)
-  );
-  
-  if (!hasMention) {
+  // Check 2: Must mention someone
+  // We allow vouching for anyone, not just specific admins
+  if (message.mentions.users.size === 0) {
     return false;
   }
   
@@ -56,6 +79,23 @@ export function isValidVouch(message: Message): boolean {
   }
   
   return true;
+}
+
+/**
+ * Cleans a vouch message for display
+ * Removes custom emojis and extra whitespace
+ */
+export function cleanVouchMessage(content: string): string {
+  // Remove custom emojis <:name:id> and <a:name:id>
+  let cleaned = content.replace(/<a?:.+?:\d+>/g, '');
+  
+  // Trim whitespace
+  cleaned = cleaned.trim();
+  
+  // Remove multiple spaces
+  cleaned = cleaned.replace(/\s+/g, ' ');
+  
+  return cleaned;
 }
 
 /**
@@ -79,7 +119,7 @@ export function extractVouchValue(content: string): string | null {
   }
   
   // Try to extract crypto amounts
-  const cryptoMatch = text.match(/(?:\$|usd)?\s*(\d+\.?\d*)\s*(?:\$|usd)?\s*(ltc|btc|eth|usdt|crypto)/i);
+  const cryptoMatch = text.match(/(?:\$|usd)?\s*(\d+\.?\d*)\s*(?:\$|usd)?\s*(ltc|btc|eth|usdt|crypto|sol|xrp)/i);
   if (cryptoMatch) {
     return `$${cryptoMatch[1]} ${cryptoMatch[2].toUpperCase()}`;
   }
@@ -92,6 +132,12 @@ export function extractVouchValue(content: string): string | null {
   // Check for decor
   if (text.includes('decor')) {
     return 'Decor';
+  }
+
+  // Check for Robux
+  const robuxMatch = text.match(/(\d+)\s*(?:robux|rbx)/i);
+  if (robuxMatch) {
+    return `${robuxMatch[1]} Robux`;
   }
   
   return null;

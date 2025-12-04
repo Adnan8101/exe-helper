@@ -13,6 +13,7 @@ import {
   ButtonInteraction,
 } from 'discord.js';
 import { prisma } from '../database';
+import { cleanVouchMessage, isValidVouch } from '../utils/vouchValidator';
 
 interface CapturedData {
   authorId: string;
@@ -97,18 +98,15 @@ export const captureDataCommand = {
       // Sort messages by timestamp (oldest first)
       allMessages.sort((a, b) => a.createdTimestamp - b.createdTimestamp);
 
-      // Filter messages that contain "legit" or "vouch" (case-insensitive)
-      const filteredMessages = allMessages.filter((msg) => {
-        const content = msg.content.toLowerCase();
-        return content.includes('legit') || content.includes('vouch');
-      });
+      // Filter messages using the robust validator
+      const filteredMessages = allMessages.filter((msg) => isValidVouch(msg));
 
       // Process and structure the data
       const capturedData: CapturedData[] = filteredMessages.map((msg) => ({
         authorId: msg.author.id,
         authorName: msg.author.tag,
         authorAvatar: msg.author.displayAvatarURL(),
-        message: msg.content || '',
+        message: cleanVouchMessage(msg.content || ''),
         messageId: msg.id,
         timestamp: msg.createdAt,
         attachments: msg.attachments.map((att) => att.url),
@@ -161,7 +159,7 @@ export const captureDataCommand = {
       const summaryEmbed = new EmbedBuilder()
         .setColor(0x00ff00)
         .setTitle('📊 Data Collection Summary')
-        .setDescription(`Successfully captured vouches from ${channel}\n*Only messages containing "legit" or "vouch" were captured*`)
+        .setDescription(`Successfully captured vouches from ${channel}\n*Only valid vouch messages were captured*`)
         .addFields(
           { name: '📝 Total Vouches Found', value: capturedData.length.toString(), inline: true },
           { name: '📨 Total Messages Scanned', value: allMessages.length.toString(), inline: true },

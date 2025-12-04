@@ -72,7 +72,7 @@ export const autoVouchCommand = {
             .setTitle('✅ Auto-Vouch Re-enabled')
             .setDescription(`Auto-vouch collection has been re-enabled for ${channel}`)
             .addFields(
-              { name: '📋 Requirements', value: '• Must contain "legit" (case insensitive)\n• Must mention <@643480211421265930> or <@959653911923396629>\n• Must have value (INR, OWO, Nitro, etc.)', inline: false },
+              { name: '📋 Requirements', value: '• Must contain "legit", "vouch", "rep", etc.\n• Must mention the user being vouched for\n• Must have value (INR, Crypto, Nitro, etc.)', inline: false },
               { name: '🔄 Actions', value: '• Valid vouches: Saved to database ✅\n• Invalid messages: Deleted with warning ⚠️', inline: false }
             )
             .setTimestamp();
@@ -100,7 +100,7 @@ export const autoVouchCommand = {
         .setTitle('✅ Auto-Vouch Enabled')
         .setDescription(`Auto-vouch collection has been enabled for ${channel}`)
         .addFields(
-          { name: '📋 Vouch Requirements', value: '• Must contain "legit" (case insensitive)\n• Must mention <@643480211421265930> or <@959653911923396629>\n• Must have value (INR, OWO, Nitro, etc.)', inline: false },
+          { name: '📋 Vouch Requirements', value: '• Must contain "legit", "vouch", "rep", etc.\n• Must mention the user being vouched for\n• Must have value (INR, Crypto, Nitro, etc.)', inline: false },
           { name: '🔄 Bot Actions', value: '• Valid vouches: Automatically saved to database ✅\n• Invalid messages: Deleted with warning message ⚠️\n• Success message: Shows for 3 seconds then deleted', inline: false },
           { name: '⚙️ Management', value: 'Use `/auto-vouch-disable` to stop monitoring this channel', inline: false }
         )
@@ -134,7 +134,6 @@ export const autoVouchDisableCommand = {
     .setDefaultMemberPermissions(PermissionFlagsBits.Administrator),
 
   async execute(interaction: ChatInputCommandInteraction) {
-    // Check if user is admin
     if (!interaction.memberPermissions?.has(PermissionFlagsBits.Administrator)) {
       await interaction.reply({
         content: '❌ You need administrator permissions to use this command.',

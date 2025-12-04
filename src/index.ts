@@ -22,7 +22,7 @@ import {
   handleStickyMessageModal
 } from './commands/stickyMessages';
 import { connectDatabase, prisma } from './database';
-import { isValidVouch, extractImageUrls } from './utils/vouchValidator';
+import { isValidVouch, extractImageUrls, cleanVouchMessage } from './utils/vouchValidator';
 import { 
   loadChannelCache, 
   refreshCacheIfNeeded, 
@@ -342,6 +342,9 @@ client.on(Events.MessageCreate, async (message: Message) => {
       // Validate the vouch first
       if (isValidVouch(message)) {
         try {
+          // Clean message content - remove custom emojis
+          const cleanedMessage = cleanVouchMessage(message.content);
+
           // Check if vouch with this messageId already exists
           const existingVouch = await prisma.vouch.findUnique({
             where: { messageId: message.id }
@@ -352,7 +355,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
             await prisma.vouch.update({
               where: { messageId: message.id },
               data: {
-                message: message.content || '',
+                message: cleanedMessage || '',
                 attachments: message.attachments.map(att => att.url),
                 authorName: message.author.username,
                 authorAvatar: message.author.displayAvatarURL(),
@@ -391,7 +394,7 @@ client.on(Events.MessageCreate, async (message: Message) => {
                     authorName: message.author.username,
                     authorAvatar: message.author.displayAvatarURL(),
                     vouchedUserId: vouchedUserId, // Store the vouched user ID
-                    message: message.content || '',
+                    message: cleanedMessage || '',
                     messageId: message.id,
                     timestamp: message.createdAt,
                     attachments: message.attachments.map(att => att.url),
